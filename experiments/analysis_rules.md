@@ -102,6 +102,8 @@ All four policies use **leave-one-task-out cross-validation** on the complete-ta
 
 ## 8. Primary Outcome
 
+primary metric = total tokens per passed task (OpenCode-hosted cost is $0)
+
 **Total model tokens per successfully verified task** — lower is better, provided correctness (pass rate) remains comparable.
 
 **Secondary outcomes:**
