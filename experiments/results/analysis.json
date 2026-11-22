@@ -1,0 +1,2064 @@
+{
+  "experiment": "ContextRoute two-model joint routing",
+  "grid_evaluation_path": "E:\\Programing\\context_route_new\\benchmark\\results\\grid\\evaluation.json",
+  "complete_tasks": [
+    "inventory-adjustment",
+    "pricing-discount",
+    "refund-balance"
+  ],
+  "complete_task_count": 3,
+  "task_count": 8,
+  "valid_runs": 23,
+  "verified_successes": 21,
+  "valid_task_failures": 2,
+  "infrastructure_failures": 1,
+  "models": [
+    "opencode/big-pickle",
+    "opencode/deepseek-v4.1-flash-free"
+  ],
+  "baseline": {
+    "model": "opencode/big-pickle",
+    "context": "C2"
+  },
+  "performance_matrix": [
+    {
+      "model": "opencode/big-pickle",
+      "context": "C1",
+      "tasks": 4,
+      "successes": 4,
+      "success_rate": 1.0,
+      "input_tokens": 244551,
+      "output_tokens": 6405,
+      "total_tokens": 250956,
+      "total_cost_usd": 0,
+      "mean_latency_seconds": 32.98075,
+      "median_latency_seconds": 25.243499999999997,
+      "cost_per_success_usd": 0.0,
+      "successes_per_million_tokens": 15.939049076332106,
+      "initial_context_tokens": 2763,
+      "average_tokens": 62739,
+      "average_context_tokens": 690.75,
+      "average_cost_usd": 0
+    },
+    {
+      "model": "opencode/big-pickle",
+      "context": "C2",
+      "tasks": 4,
+      "successes": 4,
+      "success_rate": 1.0,
+      "input_tokens": 144422,
+      "output_tokens": 5713,
+      "total_tokens": 150135,
+      "total_cost_usd": 0,
+      "mean_latency_seconds": 19.8845,
+      "median_latency_seconds": 22.6305,
+      "cost_per_success_usd": 0.0,
+      "successes_per_million_tokens": 26.64268824724415,
+      "initial_context_tokens": 3180,
+      "average_tokens": 37533.75,
+      "average_context_tokens": 795,
+      "average_cost_usd": 0
+    },
+    {
+      "model": "opencode/big-pickle",
+      "context": "C3",
+      "tasks": 4,
+      "successes": 4,
+      "success_rate": 1.0,
+      "input_tokens": 190808,
+      "output_tokens": 8871,
+      "total_tokens": 199679,
+      "total_cost_usd": 0,
+      "mean_latency_seconds": 27.762,
+      "median_latency_seconds": 29.7165,
+      "cost_per_success_usd": 0.0,
+      "successes_per_million_tokens": 20.032151603323335,
+      "initial_context_tokens": 3531,
+      "average_tokens": 49919.75,
+      "average_context_tokens": 882.75,
+      "average_cost_usd": 0
+    },
+    {
+      "model": "opencode/deepseek-v4.1-flash-free",
+      "context": "C1",
+      "tasks": 4,
+      "successes": 3,
+      "success_rate": 0.75,
+      "input_tokens": 148668,
+      "output_tokens": 4100,
+      "total_tokens": 152768,
+      "total_cost_usd": 0,
+      "mean_latency_seconds": 23.58575,
+      "median_latency_seconds": 21.4775,
+      "cost_per_success_usd": 0.0,
+      "successes_per_million_tokens": 19.637620444072056,
+      "initial_context_tokens": 2763,
+      "average_tokens": 38192,
+      "average_context_tokens": 690.75,
+      "average_cost_usd": 0
+    },
+    {
+      "model": "opencode/deepseek-v4.1-flash-free",
+      "context": "C2",
+      "tasks": 4,
+      "successes": 3,
+      "success_rate": 0.75,
+      "input_tokens": 191960,
+      "output_tokens": 5047,
+      "total_tokens": 197007,
+      "total_cost_usd": 0,
+      "mean_latency_seconds": 25.853749999999998,
+      "median_latency_seconds": 26.911,
+      "cost_per_success_usd": 0.0,
+      "successes_per_million_tokens": 15.227885303567893,
+      "initial_context_tokens": 3180,
+      "average_tokens": 49251.75,
+      "average_context_tokens": 795,
+      "average_cost_usd": 0
+    },
+    {
+      "model": "opencode/deepseek-v4.1-flash-free",
+      "context": "C3",
+      "tasks": 3,
+      "successes": 3,
+      "success_rate": 1.0,
+      "input_tokens": 84850,
+      "output_tokens": 2695,
+      "total_tokens": 87545,
+      "total_cost_usd": 0,
+      "mean_latency_seconds": 16.453333333333333,
+      "median_latency_seconds": 16.029,
+      "cost_per_success_usd": 0.0,
+      "successes_per_million_tokens": 34.26809069621338,
+      "initial_context_tokens": 2718,
+      "average_tokens": 29181.666666666668,
+      "average_context_tokens": 906,
+      "average_cost_usd": 0
+    }
+  ],
+  "routing_policies_actual": {
+    "fixed": {
+      "tasks": 3,
+      "successes": 3,
+      "success_rate": 1.0,
+      "input_tokens": 96377,
+      "output_tokens": 4291,
+      "total_tokens": 100668,
+      "total_cost_usd": 0,
+      "mean_latency_seconds": 18.91433333333333,
+      "median_latency_seconds": 22.466,
+      "cost_per_success_usd": 0.0,
+      "successes_per_million_tokens": 29.800929789009416,
+      "initial_context_tokens": 2420,
+      "tasks_requested": 3,
+      "abstentions": 0,
+      "cold_start_fallbacks": 0,
+      "insufficient_evidence_fallbacks": 3,
+      "mean_recorded_router_overhead_ms": 107.66666666666667,
+      "decisions": [
+        {
+          "task": "inventory-adjustment",
+          "repository": "contextroute-shop",
+          "training_tasks": 2,
+          "decision": {
+            "selected": {
+              "model": "opencode/big-pickle",
+              "context": "C2",
+              "context_tokens": 814,
+              "viable": true,
+              "constraints_met": true,
+              "exclusions": [],
+              "evidence_scope": "pooled",
+              "evidence_count": 2,
+              "observed_success": 1,
+              "success_lower_bound": 0.3423719528896193,
+              "average_cost_usd": 0,
+              "average_tokens": 24689,
+              "average_latency_seconds": 17.1385,
+              "estimated_cost_per_success_usd": 0,
+              "one_call_context_cost_usd": 0
+            },
+            "alternatives": [
+              {
+                "model": "opencode/big-pickle",
+                "context": "C2",
+                "context_tokens": 814,
+                "viable": true,
+                "constraints_met": true,
+                "exclusions": [],
+                "evidence_scope": "pooled",
+                "evidence_count": 2,
+                "observed_success": 1,
+                "success_lower_bound": 0.3423719528896193,
+                "average_cost_usd": 0,
+                "average_tokens": 24689,
+                "average_latency_seconds": 17.1385,
+                "estimated_cost_per_success_usd": 0,
+                "one_call_context_cost_usd": 0
+              }
+            ],
+            "policy_version": "default-tier-fallback-v2",
+            "decision_type": "cold_start_fallback",
+            "fallback_reason": "insufficient_evidence",
+            "reasons": [
+              "No allowed pair met the minimum sample, success, and whole-task cost criteria.",
+              "Retained the original model and used the provisional default tier C2."
+            ]
+          }
+        },
+        {
+          "task": "pricing-discount",
+          "repository": "contextroute-shop",
+          "training_tasks": 2,
+          "decision": {
+            "selected": {
+              "model": "opencode/big-pickle",
+              "context": "C2",
+              "context_tokens": 1008,
+              "viable": true,
+              "constraints_met": true,
+              "exclusions": [],
+              "evidence_scope": "pooled",
+              "evidence_count": 2,
+              "observed_success": 1,
+              "success_lower_bound": 0.3423719528896193,
+              "average_cost_usd": 0,
+              "average_tokens": 37440,
+              "average_latency_seconds": 22.91,
+              "estimated_cost_per_success_usd": 0,
+              "one_call_context_cost_usd": 0
+            },
+            "alternatives": [
+              {
+                "model": "opencode/big-pickle",
+                "context": "C2",
+                "context_tokens": 1008,
+                "viable": true,
+                "constraints_met": true,
+                "exclusions": [],
+                "evidence_scope": "pooled",
+                "evidence_count": 2,
+                "observed_success": 1,
+                "success_lower_bound": 0.3423719528896193,
+                "average_cost_usd": 0,
+                "average_tokens": 37440,
+                "average_latency_seconds": 22.91,
+                "estimated_cost_per_success_usd": 0,
+                "one_call_context_cost_usd": 0
+              }
+            ],
+            "policy_version": "default-tier-fallback-v2",
+            "decision_type": "cold_start_fallback",
+            "fallback_reason": "insufficient_evidence",
+            "reasons": [
+              "No allowed pair met the minimum sample, success, and whole-task cost criteria.",
+              "Retained the original model and used the provisional default tier C2."
+            ]
+          }
+        },
+        {
+          "task": "refund-balance",
+          "repository": "contextroute-shop",
+          "training_tasks": 2,
+          "decision": {
+            "selected": {
+              "model": "opencode/big-pickle",
+              "context": "C2",
+              "context_tokens": 598,
+              "viable": true,
+              "constraints_met": true,
+              "exclusions": [],
+              "evidence_scope": "pooled",
+              "evidence_count": 2,
+              "observed_success": 1,
+              "success_lower_bound": 0.3423719528896193,
+              "average_cost_usd": 0,
+              "average_tokens": 38539,
+              "average_latency_seconds": 16.6945,
+              "estimated_cost_per_success_usd": 0,
+              "one_call_context_cost_usd": 0
+            },
+            "alternatives": [
+              {
+                "model": "opencode/big-pickle",
+                "context": "C2",
+                "context_tokens": 598,
+                "viable": true,
+                "constraints_met": true,
+                "exclusions": [],
+                "evidence_scope": "pooled",
+                "evidence_count": 2,
+                "observed_success": 1,
+                "success_lower_bound": 0.3423719528896193,
+                "average_cost_usd": 0,
+                "average_tokens": 38539,
+                "average_latency_seconds": 16.6945,
+                "estimated_cost_per_success_usd": 0,
+                "one_call_context_cost_usd": 0
+              }
+            ],
+            "policy_version": "default-tier-fallback-v2",
+            "decision_type": "cold_start_fallback",
+            "fallback_reason": "insufficient_evidence",
+            "reasons": [
+              "No allowed pair met the minimum sample, success, and whole-task cost criteria.",
+              "Retained the original model and used the provisional default tier C2."
+            ]
+          }
+        }
+      ],
+      "empirical_decisions": 0,
+      "fallback_decisions": 0,
+      "outcomes_by_source": {
+        "empirical": {
+          "tasks": 0,
+          "successes": 0,
+          "success_rate": null,
+          "input_tokens": null,
+          "output_tokens": null,
+          "total_tokens": null,
+          "total_cost_usd": null,
+          "mean_latency_seconds": null,
+          "median_latency_seconds": null,
+          "cost_per_success_usd": null,
+          "successes_per_million_tokens": null,
+          "initial_context_tokens": null
+        },
+        "fallback": {
+          "tasks": 0,
+          "successes": 0,
+          "success_rate": null,
+          "input_tokens": null,
+          "output_tokens": null,
+          "total_tokens": null,
+          "total_cost_usd": null,
+          "mean_latency_seconds": null,
+          "median_latency_seconds": null,
+          "cost_per_success_usd": null,
+          "successes_per_million_tokens": null,
+          "initial_context_tokens": null
+        }
+      },
+      "average_tokens": 33556.0,
+      "token_savings_pct": 0.0
+    },
+    "model_only": {
+      "tasks": 3,
+      "successes": 3,
+      "success_rate": 1.0,
+      "input_tokens": 96377,
+      "output_tokens": 4291,
+      "total_tokens": 100668,
+      "total_cost_usd": 0,
+      "mean_latency_seconds": 18.91433333333333,
+      "median_latency_seconds": 22.466,
+      "cost_per_success_usd": 0.0,
+      "successes_per_million_tokens": 29.800929789009416,
+      "initial_context_tokens": 2420,
+      "tasks_requested": 3,
+      "abstentions": 0,
+      "cold_start_fallbacks": 0,
+      "insufficient_evidence_fallbacks": 3,
+      "mean_recorded_router_overhead_ms": 107.66666666666667,
+      "decisions": [
+        {
+          "task": "inventory-adjustment",
+          "repository": "contextroute-shop",
+          "training_tasks": 2,
+          "decision": {
+            "selected": {
+              "model": "opencode/big-pickle",
+              "context": "C2",
+              "context_tokens": 814,
+              "viable": true,
+              "constraints_met": true,
+              "exclusions": [],
+              "evidence_scope": "pooled",
+              "evidence_count": 2,
+              "observed_success": 1,
+              "success_lower_bound": 0.3423719528896193,
+              "average_cost_usd": 0,
+              "average_tokens": 24689,
+              "average_latency_seconds": 17.1385,
+              "estimated_cost_per_success_usd": 0,
+              "one_call_context_cost_usd": 0
+            },
+            "alternatives": [
+              {
+                "model": "opencode/big-pickle",
+                "context": "C2",
+                "context_tokens": 814,
+                "viable": true,
+                "constraints_met": true,
+                "exclusions": [],
+                "evidence_scope": "pooled",
+                "evidence_count": 2,
+                "observed_success": 1,
+                "success_lower_bound": 0.3423719528896193,
+                "average_cost_usd": 0,
+                "average_tokens": 24689,
+                "average_latency_seconds": 17.1385,
+                "estimated_cost_per_success_usd": 0,
+                "one_call_context_cost_usd": 0
+              },
+              {
+                "model": "opencode/deepseek-v4.1-flash-free",
+                "context": "C2",
+                "context_tokens": 814,
+                "viable": true,
+                "constraints_met": true,
+                "exclusions": [],
+                "evidence_scope": "pooled",
+                "evidence_count": 2,
+                "observed_success": 1,
+                "success_lower_bound": 0.3423719528896193,
+                "average_cost_usd": 0,
+                "average_tokens": 40580.5,
+                "average_latency_seconds": 24.183500000000002,
+                "estimated_cost_per_success_usd": 0,
+                "one_call_context_cost_usd": 0
+              }
+            ],
+            "policy_version": "default-tier-fallback-v2",
+            "decision_type": "cold_start_fallback",
+            "fallback_reason": "insufficient_evidence",
+            "reasons": [
+              "No allowed pair met the minimum sample, success, and whole-task cost criteria.",
+              "Retained the original model and used the provisional default tier C2."
+            ]
+          }
+        },
+        {
+          "task": "pricing-discount",
+          "repository": "contextroute-shop",
+          "training_tasks": 2,
+          "decision": {
+            "selected": {
+              "model": "opencode/big-pickle",
+              "context": "C2",
+              "context_tokens": 1008,
+              "viable": true,
+              "constraints_met": true,
+              "exclusions": [],
+              "evidence_scope": "pooled",
+              "evidence_count": 2,
+              "observed_success": 1,
+              "success_lower_bound": 0.3423719528896193,
+              "average_cost_usd": 0,
+              "average_tokens": 37440,
+              "average_latency_seconds": 22.91,
+              "estimated_cost_per_success_usd": 0,
+              "one_call_context_cost_usd": 0
+            },
+            "alternatives": [
+              {
+                "model": "opencode/big-pickle",
+                "context": "C2",
+                "context_tokens": 1008,
+                "viable": true,
+                "constraints_met": true,
+                "exclusions": [],
+                "evidence_scope": "pooled",
+                "evidence_count": 2,
+                "observed_success": 1,
+                "success_lower_bound": 0.3423719528896193,
+                "average_cost_usd": 0,
+                "average_tokens": 37440,
+                "average_latency_seconds": 22.91,
+                "estimated_cost_per_success_usd": 0,
+                "one_call_context_cost_usd": 0
+              },
+              {
+                "model": "opencode/deepseek-v4.1-flash-free",
+                "context": "C2",
+                "context_tokens": 1008,
+                "viable": true,
+                "constraints_met": true,
+                "exclusions": [],
+                "evidence_scope": "pooled",
+                "evidence_count": 2,
+                "observed_success": 1,
+                "success_lower_bound": 0.3423719528896193,
+                "average_cost_usd": 0,
+                "average_tokens": 45398,
+                "average_latency_seconds": 26.911,
+                "estimated_cost_per_success_usd": 0,
+                "one_call_context_cost_usd": 0
+              }
+            ],
+            "policy_version": "default-tier-fallback-v2",
+            "decision_type": "cold_start_fallback",
+            "fallback_reason": "insufficient_evidence",
+            "reasons": [
+              "No allowed pair met the minimum sample, success, and whole-task cost criteria.",
+              "Retained the original model and used the provisional default tier C2."
+            ]
+          }
+        },
+        {
+          "task": "refund-balance",
+          "repository": "contextroute-shop",
+          "training_tasks": 2,
+          "decision": {
+            "selected": {
+              "model": "opencode/big-pickle",
+              "context": "C2",
+              "context_tokens": 598,
+              "viable": true,
+              "constraints_met": true,
+              "exclusions": [],
+              "evidence_scope": "pooled",
+              "evidence_count": 2,
+              "observed_success": 1,
+              "success_lower_bound": 0.3423719528896193,
+              "average_cost_usd": 0,
+              "average_tokens": 38539,
+              "average_latency_seconds": 16.6945,
+              "estimated_cost_per_success_usd": 0,
+              "one_call_context_cost_usd": 0
+            },
+            "alternatives": [
+              {
+                "model": "opencode/big-pickle",
+                "context": "C2",
+                "context_tokens": 598,
+                "viable": true,
+                "constraints_met": true,
+                "exclusions": [],
+                "evidence_scope": "pooled",
+                "evidence_count": 2,
+                "observed_success": 1,
+                "success_lower_bound": 0.3423719528896193,
+                "average_cost_usd": 0,
+                "average_tokens": 38539,
+                "average_latency_seconds": 16.6945,
+                "estimated_cost_per_success_usd": 0,
+                "one_call_context_cost_usd": 0
+              },
+              {
+                "model": "opencode/deepseek-v4.1-flash-free",
+                "context": "C2",
+                "context_tokens": 598,
+                "viable": true,
+                "constraints_met": true,
+                "exclusions": [],
+                "evidence_scope": "pooled",
+                "evidence_count": 2,
+                "observed_success": 1,
+                "success_lower_bound": 0.3423719528896193,
+                "average_cost_usd": 0,
+                "average_tokens": 38517.5,
+                "average_latency_seconds": 21.0415,
+                "estimated_cost_per_success_usd": 0,
+                "one_call_context_cost_usd": 0
+              }
+            ],
+            "policy_version": "default-tier-fallback-v2",
+            "decision_type": "cold_start_fallback",
+            "fallback_reason": "insufficient_evidence",
+            "reasons": [
+              "No allowed pair met the minimum sample, success, and whole-task cost criteria.",
+              "Retained the original model and used the provisional default tier C2."
+            ]
+          }
+        }
+      ],
+      "empirical_decisions": 0,
+      "fallback_decisions": 3,
+      "outcomes_by_source": {
+        "empirical": {
+          "tasks": 0,
+          "successes": 0,
+          "success_rate": null,
+          "input_tokens": null,
+          "output_tokens": null,
+          "total_tokens": null,
+          "total_cost_usd": null,
+          "mean_latency_seconds": null,
+          "median_latency_seconds": null,
+          "cost_per_success_usd": null,
+          "successes_per_million_tokens": null,
+          "initial_context_tokens": null
+        },
+        "fallback": {
+          "tasks": 3,
+          "successes": 3,
+          "success_rate": 1.0,
+          "input_tokens": 96377,
+          "output_tokens": 4291,
+          "total_tokens": 100668,
+          "total_cost_usd": 0,
+          "mean_latency_seconds": 18.91433333333333,
+          "median_latency_seconds": 22.466,
+          "cost_per_success_usd": 0.0,
+          "successes_per_million_tokens": 29.800929789009416,
+          "initial_context_tokens": 2420
+        }
+      },
+      "average_tokens": 33556.0,
+      "token_savings_pct": 0.0
+    },
+    "context_only": {
+      "tasks": 3,
+      "successes": 3,
+      "success_rate": 1.0,
+      "input_tokens": 96377,
+      "output_tokens": 4291,
+      "total_tokens": 100668,
+      "total_cost_usd": 0,
+      "mean_latency_seconds": 18.91433333333333,
+      "median_latency_seconds": 22.466,
+      "cost_per_success_usd": 0.0,
+      "successes_per_million_tokens": 29.800929789009416,
+      "initial_context_tokens": 2420,
+      "tasks_requested": 3,
+      "abstentions": 0,
+      "cold_start_fallbacks": 0,
+      "insufficient_evidence_fallbacks": 3,
+      "mean_recorded_router_overhead_ms": 107.66666666666667,
+      "decisions": [
+        {
+          "task": "inventory-adjustment",
+          "repository": "contextroute-shop",
+          "training_tasks": 2,
+          "decision": {
+            "selected": {
+              "model": "opencode/big-pickle",
+              "context": "C2",
+              "context_tokens": 814,
+              "viable": true,
+              "constraints_met": true,
+              "exclusions": [],
+              "evidence_scope": "pooled",
+              "evidence_count": 2,
+              "observed_success": 1,
+              "success_lower_bound": 0.3423719528896193,
+              "average_cost_usd": 0,
+              "average_tokens": 24689,
+              "average_latency_seconds": 17.1385,
+              "estimated_cost_per_success_usd": 0,
+              "one_call_context_cost_usd": 0
+            },
+            "alternatives": [
+              {
+                "model": "opencode/big-pickle",
+                "context": "C1",
+                "context_tokens": 814,
+                "viable": true,
+                "constraints_met": true,
+                "exclusions": [],
+                "evidence_scope": "pooled",
+                "evidence_count": 2,
+                "observed_success": 1,
+                "success_lower_bound": 0.3423719528896193,
+                "average_cost_usd": 0,
+                "average_tokens": 89042,
+                "average_latency_seconds": 48.75,
+                "estimated_cost_per_success_usd": 0,
+                "one_call_context_cost_usd": 0
+              },
+              {
+                "model": "opencode/big-pickle",
+                "context": "C2",
+                "context_tokens": 814,
+                "viable": true,
+                "constraints_met": true,
+                "exclusions": [],
+                "evidence_scope": "pooled",
+                "evidence_count": 2,
+                "observed_success": 1,
+                "success_lower_bound": 0.3423719528896193,
+                "average_cost_usd": 0,
+                "average_tokens": 24689,
+                "average_latency_seconds": 17.1385,
+                "estimated_cost_per_success_usd": 0,
+                "one_call_context_cost_usd": 0
+              },
+              {
+                "model": "opencode/big-pickle",
+                "context": "C3",
+                "context_tokens": 955,
+                "viable": true,
+                "constraints_met": true,
+                "exclusions": [],
+                "evidence_scope": "pooled",
+                "evidence_count": 2,
+                "observed_success": 1,
+                "success_lower_bound": 0.3423719528896193,
+                "average_cost_usd": 0,
+                "average_tokens": 27844,
+                "average_latency_seconds": 19.215,
+                "estimated_cost_per_success_usd": 0,
+                "one_call_context_cost_usd": 0
+              }
+            ],
+            "policy_version": "default-tier-fallback-v2",
+            "decision_type": "cold_start_fallback",
+            "fallback_reason": "insufficient_evidence",
+            "reasons": [
+              "No allowed pair met the minimum sample, success, and whole-task cost criteria.",
+              "Retained the original model and used the provisional default tier C2."
+            ]
+          }
+        },
+        {
+          "task": "pricing-discount",
+          "repository": "contextroute-shop",
+          "training_tasks": 2,
+          "decision": {
+            "selected": {
+              "model": "opencode/big-pickle",
+              "context": "C2",
+              "context_tokens": 1008,
+              "viable": true,
+              "constraints_met": true,
+              "exclusions": [],
+              "evidence_scope": "pooled",
+              "evidence_count": 2,
+              "observed_success": 1,
+              "success_lower_bound": 0.3423719528896193,
+              "average_cost_usd": 0,
+              "average_tokens": 37440,
+              "average_latency_seconds": 22.91,
+              "estimated_cost_per_success_usd": 0,
+              "one_call_context_cost_usd": 0
+            },
+            "alternatives": [
+              {
+                "model": "opencode/big-pickle",
+                "context": "C1",
+                "context_tokens": 784,
+                "viable": true,
+                "constraints_met": true,
+                "exclusions": [],
+                "evidence_scope": "pooled",
+                "evidence_count": 2,
+                "observed_success": 1,
+                "success_lower_bound": 0.3423719528896193,
+                "average_cost_usd": 0,
+                "average_tokens": 66519,
+                "average_latency_seconds": 40.717999999999996,
+                "estimated_cost_per_success_usd": 0,
+                "one_call_context_cost_usd": 0
+              },
+              {
+                "model": "opencode/big-pickle",
+                "context": "C2",
+                "context_tokens": 1008,
+                "viable": true,
+                "constraints_met": true,
+                "exclusions": [],
+                "evidence_scope": "pooled",
+                "evidence_count": 2,
+                "observed_success": 1,
+                "success_lower_bound": 0.3423719528896193,
+                "average_cost_usd": 0,
+                "average_tokens": 37440,
+                "average_latency_seconds": 22.91,
+                "estimated_cost_per_success_usd": 0,
+                "one_call_context_cost_usd": 0
+              },
+              {
+                "model": "opencode/big-pickle",
+                "context": "C3",
+                "context_tokens": 1060,
+                "viable": true,
+                "constraints_met": true,
+                "exclusions": [],
+                "evidence_scope": "pooled",
+                "evidence_count": 2,
+                "observed_success": 1,
+                "success_lower_bound": 0.3423719528896193,
+                "average_cost_usd": 0,
+                "average_tokens": 45354.5,
+                "average_latency_seconds": 31.0895,
+                "estimated_cost_per_success_usd": 0,
+                "one_call_context_cost_usd": 0
+              }
+            ],
+            "policy_version": "default-tier-fallback-v2",
+            "decision_type": "cold_start_fallback",
+            "fallback_reason": "insufficient_evidence",
+            "reasons": [
+              "No allowed pair met the minimum sample, success, and whole-task cost criteria.",
+              "Retained the original model and used the provisional default tier C2."
+            ]
+          }
+        },
+        {
+          "task": "refund-balance",
+          "repository": "contextroute-shop",
+          "training_tasks": 2,
+          "decision": {
+            "selected": {
+              "model": "opencode/big-pickle",
+              "context": "C2",
+              "context_tokens": 598,
+              "viable": true,
+              "constraints_met": true,
+              "exclusions": [],
+              "evidence_scope": "pooled",
+              "evidence_count": 2,
+              "observed_success": 1,
+              "success_lower_bound": 0.3423719528896193,
+              "average_cost_usd": 0,
+              "average_tokens": 38539,
+              "average_latency_seconds": 16.6945,
+              "estimated_cost_per_success_usd": 0,
+              "one_call_context_cost_usd": 0
+            },
+            "alternatives": [
+              {
+                "model": "opencode/big-pickle",
+                "context": "C1",
+                "context_tokens": 598,
+                "viable": true,
+                "constraints_met": true,
+                "exclusions": [],
+                "evidence_scope": "pooled",
+                "evidence_count": 2,
+                "observed_success": 1,
+                "success_lower_bound": 0.3423719528896193,
+                "average_cost_usd": 0,
+                "average_tokens": 40454,
+                "average_latency_seconds": 20.534,
+                "estimated_cost_per_success_usd": 0,
+                "one_call_context_cost_usd": 0
+              },
+              {
+                "model": "opencode/big-pickle",
+                "context": "C2",
+                "context_tokens": 598,
+                "viable": true,
+                "constraints_met": true,
+                "exclusions": [],
+                "evidence_scope": "pooled",
+                "evidence_count": 2,
+                "observed_success": 1,
+                "success_lower_bound": 0.3423719528896193,
+                "average_cost_usd": 0,
+                "average_tokens": 38539,
+                "average_latency_seconds": 16.6945,
+                "estimated_cost_per_success_usd": 0,
+                "one_call_context_cost_usd": 0
+              },
+              {
+                "model": "opencode/big-pickle",
+                "context": "C3",
+                "context_tokens": 703,
+                "viable": true,
+                "constraints_met": true,
+                "exclusions": [],
+                "evidence_scope": "pooled",
+                "evidence_count": 2,
+                "observed_success": 1,
+                "success_lower_bound": 0.3423719528896193,
+                "average_cost_usd": 0,
+                "average_tokens": 48812.5,
+                "average_latency_seconds": 25.8075,
+                "estimated_cost_per_success_usd": 0,
+                "one_call_context_cost_usd": 0
+              }
+            ],
+            "policy_version": "default-tier-fallback-v2",
+            "decision_type": "cold_start_fallback",
+            "fallback_reason": "insufficient_evidence",
+            "reasons": [
+              "No allowed pair met the minimum sample, success, and whole-task cost criteria.",
+              "Retained the original model and used the provisional default tier C2."
+            ]
+          }
+        }
+      ],
+      "empirical_decisions": 0,
+      "fallback_decisions": 3,
+      "outcomes_by_source": {
+        "empirical": {
+          "tasks": 0,
+          "successes": 0,
+          "success_rate": null,
+          "input_tokens": null,
+          "output_tokens": null,
+          "total_tokens": null,
+          "total_cost_usd": null,
+          "mean_latency_seconds": null,
+          "median_latency_seconds": null,
+          "cost_per_success_usd": null,
+          "successes_per_million_tokens": null,
+          "initial_context_tokens": null
+        },
+        "fallback": {
+          "tasks": 3,
+          "successes": 3,
+          "success_rate": 1.0,
+          "input_tokens": 96377,
+          "output_tokens": 4291,
+          "total_tokens": 100668,
+          "total_cost_usd": 0,
+          "mean_latency_seconds": 18.91433333333333,
+          "median_latency_seconds": 22.466,
+          "cost_per_success_usd": 0.0,
+          "successes_per_million_tokens": 29.800929789009416,
+          "initial_context_tokens": 2420
+        }
+      },
+      "average_tokens": 33556.0,
+      "token_savings_pct": 0.0
+    },
+    "joint": {
+      "tasks": 3,
+      "successes": 3,
+      "success_rate": 1.0,
+      "input_tokens": 96377,
+      "output_tokens": 4291,
+      "total_tokens": 100668,
+      "total_cost_usd": 0,
+      "mean_latency_seconds": 18.91433333333333,
+      "median_latency_seconds": 22.466,
+      "cost_per_success_usd": 0.0,
+      "successes_per_million_tokens": 29.800929789009416,
+      "initial_context_tokens": 2420,
+      "tasks_requested": 3,
+      "abstentions": 0,
+      "cold_start_fallbacks": 0,
+      "insufficient_evidence_fallbacks": 3,
+      "mean_recorded_router_overhead_ms": 107.66666666666667,
+      "decisions": [
+        {
+          "task": "inventory-adjustment",
+          "repository": "contextroute-shop",
+          "training_tasks": 2,
+          "decision": {
+            "selected": {
+              "model": "opencode/big-pickle",
+              "context": "C2",
+              "context_tokens": 814,
+              "viable": true,
+              "constraints_met": true,
+              "exclusions": [],
+              "evidence_scope": "pooled",
+              "evidence_count": 2,
+              "observed_success": 1,
+              "success_lower_bound": 0.3423719528896193,
+              "average_cost_usd": 0,
+              "average_tokens": 24689,
+              "average_latency_seconds": 17.1385,
+              "estimated_cost_per_success_usd": 0,
+              "one_call_context_cost_usd": 0
+            },
+            "alternatives": [
+              {
+                "model": "opencode/big-pickle",
+                "context": "C1",
+                "context_tokens": 814,
+                "viable": true,
+                "constraints_met": true,
+                "exclusions": [],
+                "evidence_scope": "pooled",
+                "evidence_count": 2,
+                "observed_success": 1,
+                "success_lower_bound": 0.3423719528896193,
+                "average_cost_usd": 0,
+                "average_tokens": 89042,
+                "average_latency_seconds": 48.75,
+                "estimated_cost_per_success_usd": 0,
+                "one_call_context_cost_usd": 0
+              },
+              {
+                "model": "opencode/big-pickle",
+                "context": "C2",
+                "context_tokens": 814,
+                "viable": true,
+                "constraints_met": true,
+                "exclusions": [],
+                "evidence_scope": "pooled",
+                "evidence_count": 2,
+                "observed_success": 1,
+                "success_lower_bound": 0.3423719528896193,
+                "average_cost_usd": 0,
+                "average_tokens": 24689,
+                "average_latency_seconds": 17.1385,
+                "estimated_cost_per_success_usd": 0,
+                "one_call_context_cost_usd": 0
+              },
+              {
+                "model": "opencode/big-pickle",
+                "context": "C3",
+                "context_tokens": 955,
+                "viable": true,
+                "constraints_met": true,
+                "exclusions": [],
+                "evidence_scope": "pooled",
+                "evidence_count": 2,
+                "observed_success": 1,
+                "success_lower_bound": 0.3423719528896193,
+                "average_cost_usd": 0,
+                "average_tokens": 27844,
+                "average_latency_seconds": 19.215,
+                "estimated_cost_per_success_usd": 0,
+                "one_call_context_cost_usd": 0
+              },
+              {
+                "model": "opencode/deepseek-v4.1-flash-free",
+                "context": "C1",
+                "context_tokens": 814,
+                "viable": true,
+                "constraints_met": true,
+                "exclusions": [],
+                "evidence_scope": "pooled",
+                "evidence_count": 2,
+                "observed_success": 1,
+                "success_lower_bound": 0.3423719528896193,
+                "average_cost_usd": 0,
+                "average_tokens": 30653.5,
+                "average_latency_seconds": 19.5985,
+                "estimated_cost_per_success_usd": 0,
+                "one_call_context_cost_usd": 0
+              },
+              {
+                "model": "opencode/deepseek-v4.1-flash-free",
+                "context": "C2",
+                "context_tokens": 814,
+                "viable": true,
+                "constraints_met": true,
+                "exclusions": [],
+                "evidence_scope": "pooled",
+                "evidence_count": 2,
+                "observed_success": 1,
+                "success_lower_bound": 0.3423719528896193,
+                "average_cost_usd": 0,
+                "average_tokens": 40580.5,
+                "average_latency_seconds": 24.183500000000002,
+                "estimated_cost_per_success_usd": 0,
+                "one_call_context_cost_usd": 0
+              },
+              {
+                "model": "opencode/deepseek-v4.1-flash-free",
+                "context": "C3",
+                "context_tokens": 955,
+                "viable": true,
+                "constraints_met": true,
+                "exclusions": [],
+                "evidence_scope": "pooled",
+                "evidence_count": 2,
+                "observed_success": 1,
+                "success_lower_bound": 0.3423719528896193,
+                "average_cost_usd": 0,
+                "average_tokens": 29689.5,
+                "average_latency_seconds": 15.7095,
+                "estimated_cost_per_success_usd": 0,
+                "one_call_context_cost_usd": 0
+              }
+            ],
+            "policy_version": "default-tier-fallback-v2",
+            "decision_type": "cold_start_fallback",
+            "fallback_reason": "insufficient_evidence",
+            "reasons": [
+              "No allowed pair met the minimum sample, success, and whole-task cost criteria.",
+              "Retained the original model and used the provisional default tier C2."
+            ]
+          }
+        },
+        {
+          "task": "pricing-discount",
+          "repository": "contextroute-shop",
+          "training_tasks": 2,
+          "decision": {
+            "selected": {
+              "model": "opencode/big-pickle",
+              "context": "C2",
+              "context_tokens": 1008,
+              "viable": true,
+              "constraints_met": true,
+              "exclusions": [],
+              "evidence_scope": "pooled",
+              "evidence_count": 2,
+              "observed_success": 1,
+              "success_lower_bound": 0.3423719528896193,
+              "average_cost_usd": 0,
+              "average_tokens": 37440,
+              "average_latency_seconds": 22.91,
+              "estimated_cost_per_success_usd": 0,
+              "one_call_context_cost_usd": 0
+            },
+            "alternatives": [
+              {
+                "model": "opencode/big-pickle",
+                "context": "C1",
+                "context_tokens": 784,
+                "viable": true,
+                "constraints_met": true,
+                "exclusions": [],
+                "evidence_scope": "pooled",
+                "evidence_count": 2,
+                "observed_success": 1,
+                "success_lower_bound": 0.3423719528896193,
+                "average_cost_usd": 0,
+                "average_tokens": 66519,
+                "average_latency_seconds": 40.717999999999996,
+                "estimated_cost_per_success_usd": 0,
+                "one_call_context_cost_usd": 0
+              },
+              {
+                "model": "opencode/big-pickle",
+                "context": "C2",
+                "context_tokens": 1008,
+                "viable": true,
+                "constraints_met": true,
+                "exclusions": [],
+                "evidence_scope": "pooled",
+                "evidence_count": 2,
+                "observed_success": 1,
+                "success_lower_bound": 0.3423719528896193,
+                "average_cost_usd": 0,
+                "average_tokens": 37440,
+                "average_latency_seconds": 22.91,
+                "estimated_cost_per_success_usd": 0,
+                "one_call_context_cost_usd": 0
+              },
+              {
+                "model": "opencode/big-pickle",
+                "context": "C3",
+                "context_tokens": 1060,
+                "viable": true,
+                "constraints_met": true,
+                "exclusions": [],
+                "evidence_scope": "pooled",
+                "evidence_count": 2,
+                "observed_success": 1,
+                "success_lower_bound": 0.3423719528896193,
+                "average_cost_usd": 0,
+                "average_tokens": 45354.5,
+                "average_latency_seconds": 31.0895,
+                "estimated_cost_per_success_usd": 0,
+                "one_call_context_cost_usd": 0
+              },
+              {
+                "model": "opencode/deepseek-v4.1-flash-free",
+                "context": "C1",
+                "context_tokens": 784,
+                "viable": true,
+                "constraints_met": true,
+                "exclusions": [],
+                "evidence_scope": "pooled",
+                "evidence_count": 2,
+                "observed_success": 1,
+                "success_lower_bound": 0.3423719528896193,
+                "average_cost_usd": 0,
+                "average_tokens": 38787.5,
+                "average_latency_seconds": 25.694000000000003,
+                "estimated_cost_per_success_usd": 0,
+                "one_call_context_cost_usd": 0
+              },
+              {
+                "model": "opencode/deepseek-v4.1-flash-free",
+                "context": "C2",
+                "context_tokens": 1008,
+                "viable": true,
+                "constraints_met": true,
+                "exclusions": [],
+                "evidence_scope": "pooled",
+                "evidence_count": 2,
+                "observed_success": 1,
+                "success_lower_bound": 0.3423719528896193,
+                "average_cost_usd": 0,
+                "average_tokens": 45398,
+                "average_latency_seconds": 26.911,
+                "estimated_cost_per_success_usd": 0,
+                "one_call_context_cost_usd": 0
+              },
+              {
+                "model": "opencode/deepseek-v4.1-flash-free",
+                "context": "C3",
+                "context_tokens": 1060,
+                "viable": true,
+                "constraints_met": true,
+                "exclusions": [],
+                "evidence_scope": "pooled",
+                "evidence_count": 2,
+                "observed_success": 1,
+                "success_lower_bound": 0.3423719528896193,
+                "average_cost_usd": 0,
+                "average_tokens": 29968,
+                "average_latency_seconds": 16.6655,
+                "estimated_cost_per_success_usd": 0,
+                "one_call_context_cost_usd": 0
+              }
+            ],
+            "policy_version": "default-tier-fallback-v2",
+            "decision_type": "cold_start_fallback",
+            "fallback_reason": "insufficient_evidence",
+            "reasons": [
+              "No allowed pair met the minimum sample, success, and whole-task cost criteria.",
+              "Retained the original model and used the provisional default tier C2."
+            ]
+          }
+        },
+        {
+          "task": "refund-balance",
+          "repository": "contextroute-shop",
+          "training_tasks": 2,
+          "decision": {
+            "selected": {
+              "model": "opencode/big-pickle",
+              "context": "C2",
+              "context_tokens": 598,
+              "viable": true,
+              "constraints_met": true,
+              "exclusions": [],
+              "evidence_scope": "pooled",
+              "evidence_count": 2,
+              "observed_success": 1,
+              "success_lower_bound": 0.3423719528896193,
+              "average_cost_usd": 0,
+              "average_tokens": 38539,
+              "average_latency_seconds": 16.6945,
+              "estimated_cost_per_success_usd": 0,
+              "one_call_context_cost_usd": 0
+            },
+            "alternatives": [
+              {
+                "model": "opencode/big-pickle",
+                "context": "C1",
+                "context_tokens": 598,
+                "viable": true,
+                "constraints_met": true,
+                "exclusions": [],
+                "evidence_scope": "pooled",
+                "evidence_count": 2,
+                "observed_success": 1,
+                "success_lower_bound": 0.3423719528896193,
+                "average_cost_usd": 0,
+                "average_tokens": 40454,
+                "average_latency_seconds": 20.534,
+                "estimated_cost_per_success_usd": 0,
+                "one_call_context_cost_usd": 0
+              },
+              {
+                "model": "opencode/big-pickle",
+                "context": "C2",
+                "context_tokens": 598,
+                "viable": true,
+                "constraints_met": true,
+                "exclusions": [],
+                "evidence_scope": "pooled",
+                "evidence_count": 2,
+                "observed_success": 1,
+                "success_lower_bound": 0.3423719528896193,
+                "average_cost_usd": 0,
+                "average_tokens": 38539,
+                "average_latency_seconds": 16.6945,
+                "estimated_cost_per_success_usd": 0,
+                "one_call_context_cost_usd": 0
+              },
+              {
+                "model": "opencode/big-pickle",
+                "context": "C3",
+                "context_tokens": 703,
+                "viable": true,
+                "constraints_met": true,
+                "exclusions": [],
+                "evidence_scope": "pooled",
+                "evidence_count": 2,
+                "observed_success": 1,
+                "success_lower_bound": 0.3423719528896193,
+                "average_cost_usd": 0,
+                "average_tokens": 48812.5,
+                "average_latency_seconds": 25.8075,
+                "estimated_cost_per_success_usd": 0,
+                "one_call_context_cost_usd": 0
+              },
+              {
+                "model": "opencode/deepseek-v4.1-flash-free",
+                "context": "C1",
+                "context_tokens": 598,
+                "viable": true,
+                "constraints_met": true,
+                "exclusions": [],
+                "evidence_scope": "pooled",
+                "evidence_count": 2,
+                "observed_success": 1,
+                "success_lower_bound": 0.3423719528896193,
+                "average_cost_usd": 0,
+                "average_tokens": 43327,
+                "average_latency_seconds": 31.2785,
+                "estimated_cost_per_success_usd": 0,
+                "one_call_context_cost_usd": 0
+              },
+              {
+                "model": "opencode/deepseek-v4.1-flash-free",
+                "context": "C2",
+                "context_tokens": 598,
+                "viable": true,
+                "constraints_met": true,
+                "exclusions": [],
+                "evidence_scope": "pooled",
+                "evidence_count": 2,
+                "observed_success": 1,
+                "success_lower_bound": 0.3423719528896193,
+                "average_cost_usd": 0,
+                "average_tokens": 38517.5,
+                "average_latency_seconds": 21.0415,
+                "estimated_cost_per_success_usd": 0,
+                "one_call_context_cost_usd": 0
+              },
+              {
+                "model": "opencode/deepseek-v4.1-flash-free",
+                "context": "C3",
+                "context_tokens": 703,
+                "viable": true,
+                "constraints_met": true,
+                "exclusions": [],
+                "evidence_scope": "pooled",
+                "evidence_count": 2,
+                "observed_success": 1,
+                "success_lower_bound": 0.3423719528896193,
+                "average_cost_usd": 0,
+                "average_tokens": 27887.5,
+                "average_latency_seconds": 16.985,
+                "estimated_cost_per_success_usd": 0,
+                "one_call_context_cost_usd": 0
+              }
+            ],
+            "policy_version": "default-tier-fallback-v2",
+            "decision_type": "cold_start_fallback",
+            "fallback_reason": "insufficient_evidence",
+            "reasons": [
+              "No allowed pair met the minimum sample, success, and whole-task cost criteria.",
+              "Retained the original model and used the provisional default tier C2."
+            ]
+          }
+        }
+      ],
+      "empirical_decisions": 0,
+      "fallback_decisions": 3,
+      "outcomes_by_source": {
+        "empirical": {
+          "tasks": 0,
+          "successes": 0,
+          "success_rate": null,
+          "input_tokens": null,
+          "output_tokens": null,
+          "total_tokens": null,
+          "total_cost_usd": null,
+          "mean_latency_seconds": null,
+          "median_latency_seconds": null,
+          "cost_per_success_usd": null,
+          "successes_per_million_tokens": null,
+          "initial_context_tokens": null
+        },
+        "fallback": {
+          "tasks": 3,
+          "successes": 3,
+          "success_rate": 1.0,
+          "input_tokens": 96377,
+          "output_tokens": 4291,
+          "total_tokens": 100668,
+          "total_cost_usd": 0,
+          "mean_latency_seconds": 18.91433333333333,
+          "median_latency_seconds": 22.466,
+          "cost_per_success_usd": 0.0,
+          "successes_per_million_tokens": 29.800929789009416,
+          "initial_context_tokens": 2420
+        }
+      },
+      "average_tokens": 33556.0,
+      "token_savings_pct": 0.0
+    }
+  },
+  "empirical_replay": {
+    "status": "insufficient_training_tasks",
+    "minimum_training_tasks": 4,
+    "minimum_success_lower_bound": 0.5,
+    "training_tasks_by_fold": {
+      "inventory-adjustment": 2,
+      "pricing-discount": 2,
+      "refund-balance": 2
+    },
+    "minimum_count_folds": 0,
+    "decision_counts": {
+      "model_only": {
+        "cold_start_fallback": 3
+      },
+      "context_only": {
+        "cold_start_fallback": 3
+      },
+      "joint": {
+        "cold_start_fallback": 3
+      }
+    },
+    "joint_empirical_vs_fixed": {
+      "tasks": [],
+      "measurements": {},
+      "difference": {
+        "paired_tasks": 0,
+        "token_savings_pct": null,
+        "verified_success_delta": 0,
+        "improved_tasks": [],
+        "regressions": [],
+        "both_pass_fewer_tokens": []
+      }
+    },
+    "all_adaptive_empirical": {
+      "tasks": [],
+      "measurements": {},
+      "joint_vs_model_only": {
+        "paired_tasks": 0,
+        "token_savings_pct": null,
+        "verified_success_delta": 0,
+        "improved_tasks": [],
+        "regressions": [],
+        "both_pass_fewer_tokens": []
+      }
+    }
+  },
+  "oracle": {
+    "objective": "Prefer verified success, then minimize observed total tokens. Ties retain fixed arm if available.",
+    "policies": {
+      "fixed": {
+        "tasks": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "input_tokens": 96377,
+        "output_tokens": 4291,
+        "total_tokens": 100668,
+        "total_cost_usd": null,
+        "mean_latency_seconds": 18.91433333333333,
+        "median_latency_seconds": 22.466,
+        "cost_per_success_usd": null,
+        "successes_per_million_tokens": 29.800929789009416,
+        "initial_context_tokens": null,
+        "average_tokens": 33556.0,
+        "token_delta_vs_fixed": 0
+      },
+      "model_only": {
+        "tasks": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "input_tokens": 89203,
+        "output_tokens": 3510,
+        "total_tokens": 92713,
+        "total_cost_usd": null,
+        "mean_latency_seconds": 19.348666666666666,
+        "median_latency_seconds": 23.354,
+        "cost_per_success_usd": null,
+        "successes_per_million_tokens": 32.35792175854519,
+        "initial_context_tokens": null,
+        "average_tokens": 30904.333333333332,
+        "token_delta_vs_fixed": -7955
+      },
+      "context_only": {
+        "tasks": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "input_tokens": 63544,
+        "output_tokens": 3765,
+        "total_tokens": 67309,
+        "total_cost_usd": null,
+        "mean_latency_seconds": 15.593,
+        "median_latency_seconds": 12.502,
+        "cost_per_success_usd": null,
+        "successes_per_million_tokens": 44.570562629068924,
+        "initial_context_tokens": null,
+        "average_tokens": 22436.333333333332,
+        "token_delta_vs_fixed": -33359
+      },
+      "joint": {
+        "tasks": 3,
+        "successes": 3,
+        "success_rate": 1.0,
+        "input_tokens": 63544,
+        "output_tokens": 3765,
+        "total_tokens": 67309,
+        "total_cost_usd": null,
+        "mean_latency_seconds": 15.593,
+        "median_latency_seconds": 12.502,
+        "cost_per_success_usd": null,
+        "successes_per_million_tokens": 44.570562629068924,
+        "initial_context_tokens": null,
+        "average_tokens": 22436.333333333332,
+        "token_delta_vs_fixed": -33359
+      }
+    },
+    "selections": [
+      {
+        "task": "inventory-adjustment",
+        "policy": "fixed",
+        "selected": {
+          "model": "opencode/big-pickle",
+          "context": "C2",
+          "passed": true,
+          "total_tokens": 51290,
+          "latency_seconds": 22.466,
+          "execution_id": "ffd056f1614644f7afcdb2b98d5d24da"
+        }
+      },
+      {
+        "task": "pricing-discount",
+        "policy": "fixed",
+        "selected": {
+          "model": "opencode/big-pickle",
+          "context": "C2",
+          "passed": true,
+          "total_tokens": 25788,
+          "latency_seconds": 10.923,
+          "execution_id": "40b814a9554d4c078b5a83720ca817f5"
+        }
+      },
+      {
+        "task": "refund-balance",
+        "policy": "fixed",
+        "selected": {
+          "model": "opencode/big-pickle",
+          "context": "C2",
+          "passed": true,
+          "total_tokens": 23590,
+          "latency_seconds": 23.354,
+          "execution_id": "151ef32437bf45e8976596b648101ede"
+        }
+      },
+      {
+        "task": "inventory-adjustment",
+        "policy": "model_only",
+        "selected": {
+          "model": "opencode/deepseek-v4.1-flash-free",
+          "context": "C2",
+          "passed": true,
+          "total_tokens": 43335,
+          "latency_seconds": 23.769,
+          "execution_id": "a50ba7f9f23249739f727c1f13b2b655"
+        }
+      },
+      {
+        "task": "pricing-discount",
+        "policy": "model_only",
+        "selected": {
+          "model": "opencode/big-pickle",
+          "context": "C2",
+          "passed": true,
+          "total_tokens": 25788,
+          "latency_seconds": 10.923,
+          "execution_id": "40b814a9554d4c078b5a83720ca817f5"
+        }
+      },
+      {
+        "task": "refund-balance",
+        "policy": "model_only",
+        "selected": {
+          "model": "opencode/big-pickle",
+          "context": "C2",
+          "passed": true,
+          "total_tokens": 23590,
+          "latency_seconds": 23.354,
+          "execution_id": "151ef32437bf45e8976596b648101ede"
+        }
+      },
+      {
+        "task": "inventory-adjustment",
+        "policy": "context_only",
+        "selected": {
+          "model": "opencode/big-pickle",
+          "context": "C1",
+          "passed": true,
+          "total_tokens": 17931,
+          "latency_seconds": 12.502,
+          "execution_id": "011f99245ca4443f816c5722a32b4898"
+        }
+      },
+      {
+        "task": "pricing-discount",
+        "policy": "context_only",
+        "selected": {
+          "model": "opencode/big-pickle",
+          "context": "C2",
+          "passed": true,
+          "total_tokens": 25788,
+          "latency_seconds": 10.923,
+          "execution_id": "40b814a9554d4c078b5a83720ca817f5"
+        }
+      },
+      {
+        "task": "refund-balance",
+        "policy": "context_only",
+        "selected": {
+          "model": "opencode/big-pickle",
+          "context": "C2",
+          "passed": true,
+          "total_tokens": 23590,
+          "latency_seconds": 23.354,
+          "execution_id": "151ef32437bf45e8976596b648101ede"
+        }
+      },
+      {
+        "task": "inventory-adjustment",
+        "policy": "joint",
+        "selected": {
+          "model": "opencode/big-pickle",
+          "context": "C1",
+          "passed": true,
+          "total_tokens": 17931,
+          "latency_seconds": 12.502,
+          "execution_id": "011f99245ca4443f816c5722a32b4898"
+        }
+      },
+      {
+        "task": "pricing-discount",
+        "policy": "joint",
+        "selected": {
+          "model": "opencode/big-pickle",
+          "context": "C2",
+          "passed": true,
+          "total_tokens": 25788,
+          "latency_seconds": 10.923,
+          "execution_id": "40b814a9554d4c078b5a83720ca817f5"
+        }
+      },
+      {
+        "task": "refund-balance",
+        "policy": "joint",
+        "selected": {
+          "model": "opencode/big-pickle",
+          "context": "C2",
+          "passed": true,
+          "total_tokens": 23590,
+          "latency_seconds": 23.354,
+          "execution_id": "151ef32437bf45e8976596b648101ede"
+        }
+      }
+    ]
+  },
+  "coverage": {
+    "inventory-adjustment": [
+      {
+        "model": "opencode/big-pickle",
+        "tier": "C1",
+        "status": "passed",
+        "attempt_ids": [
+          "011f99245ca4443f816c5722a32b4898"
+        ],
+        "provider_statuses": []
+      },
+      {
+        "model": "opencode/big-pickle",
+        "tier": "C2",
+        "status": "passed",
+        "attempt_ids": [
+          "ffd056f1614644f7afcdb2b98d5d24da"
+        ],
+        "provider_statuses": []
+      },
+      {
+        "model": "opencode/big-pickle",
+        "tier": "C3",
+        "status": "passed",
+        "attempt_ids": [
+          "1566e02b4b3848ff98fee48dc8b1f3de"
+        ],
+        "provider_statuses": []
+      },
+      {
+        "model": "opencode/deepseek-v4.1-flash-free",
+        "tier": "C1",
+        "status": "passed",
+        "attempt_ids": [
+          "d797de7e9b03411fae0697210e4f9562"
+        ],
+        "provider_statuses": []
+      },
+      {
+        "model": "opencode/deepseek-v4.1-flash-free",
+        "tier": "C2",
+        "status": "passed",
+        "attempt_ids": [
+          "a50ba7f9f23249739f727c1f13b2b655"
+        ],
+        "provider_statuses": []
+      },
+      {
+        "model": "opencode/deepseek-v4.1-flash-free",
+        "tier": "C3",
+        "status": "passed",
+        "attempt_ids": [
+          "3ae3a056d3ba4ea2acc2e99432929c2d"
+        ],
+        "provider_statuses": []
+      }
+    ],
+    "pricing-discount": [
+      {
+        "model": "opencode/big-pickle",
+        "tier": "C1",
+        "status": "passed",
+        "attempt_ids": [
+          "2257848ac4cd40ccb8f05aaa9cd8c96c"
+        ],
+        "provider_statuses": []
+      },
+      {
+        "model": "opencode/big-pickle",
+        "tier": "C2",
+        "status": "passed",
+        "attempt_ids": [
+          "40b814a9554d4c078b5a83720ca817f5"
+        ],
+        "provider_statuses": []
+      },
+      {
+        "model": "opencode/big-pickle",
+        "tier": "C3",
+        "status": "passed",
+        "attempt_ids": [
+          "9b8745753a414ec9b6b2b4cfcbcab353"
+        ],
+        "provider_statuses": []
+      },
+      {
+        "model": "opencode/deepseek-v4.1-flash-free",
+        "tier": "C1",
+        "status": "passed",
+        "attempt_ids": [
+          "90702d2dfe7d4bec9f92959f825b97b7"
+        ],
+        "provider_statuses": []
+      },
+      {
+        "model": "opencode/deepseek-v4.1-flash-free",
+        "tier": "C2",
+        "status": "passed",
+        "attempt_ids": [
+          "017717ad8d864a66844e55c2c7205d70"
+        ],
+        "provider_statuses": []
+      },
+      {
+        "model": "opencode/deepseek-v4.1-flash-free",
+        "tier": "C3",
+        "status": "passed",
+        "attempt_ids": [
+          "25d44ee085e049b594ab3e2c314d44a3"
+        ],
+        "provider_statuses": []
+      }
+    ],
+    "refund-balance": [
+      {
+        "model": "opencode/big-pickle",
+        "tier": "C1",
+        "status": "passed",
+        "attempt_ids": [
+          "2fccde692b7b4b819d7979a3f8bf64cc"
+        ],
+        "provider_statuses": []
+      },
+      {
+        "model": "opencode/big-pickle",
+        "tier": "C2",
+        "status": "passed",
+        "attempt_ids": [
+          "151ef32437bf45e8976596b648101ede"
+        ],
+        "provider_statuses": []
+      },
+      {
+        "model": "opencode/big-pickle",
+        "tier": "C3",
+        "status": "passed",
+        "attempt_ids": [
+          "d016e3b616024659bdec08a6a26d1b21"
+        ],
+        "provider_statuses": []
+      },
+      {
+        "model": "opencode/deepseek-v4.1-flash-free",
+        "tier": "C1",
+        "status": "passed",
+        "attempt_ids": [
+          "b5cab8cfd2764097b64d0954294c82de"
+        ],
+        "provider_statuses": []
+      },
+      {
+        "model": "opencode/deepseek-v4.1-flash-free",
+        "tier": "C2",
+        "status": "passed",
+        "attempt_ids": [
+          "beb0ad0510e742a4b2324c71454dfdd9"
+        ],
+        "provider_statuses": []
+      },
+      {
+        "model": "opencode/deepseek-v4.1-flash-free",
+        "tier": "C3",
+        "status": "passed",
+        "attempt_ids": [
+          "81fd61f991224a2d943ade4120565b78"
+        ],
+        "provider_statuses": []
+      }
+    ],
+    "daily-report": [
+      {
+        "model": "opencode/big-pickle",
+        "tier": "C1",
+        "status": "passed",
+        "attempt_ids": [
+          "fabdedb78cc846faa8ebc5c035c6c329"
+        ],
+        "provider_statuses": []
+      },
+      {
+        "model": "opencode/big-pickle",
+        "tier": "C2",
+        "status": "passed",
+        "attempt_ids": [
+          "45e76ffd865d45feae6f762c288c4a6b"
+        ],
+        "provider_statuses": []
+      },
+      {
+        "model": "opencode/big-pickle",
+        "tier": "C3",
+        "status": "passed",
+        "attempt_ids": [
+          "3bb63141a4e948ccbc772b9ca18f4bf5"
+        ],
+        "provider_statuses": []
+      },
+      {
+        "model": "opencode/deepseek-v4.1-flash-free",
+        "tier": "C1",
+        "status": "task_failed",
+        "attempt_ids": [
+          "2bb5c33011fc430f90e0179459f8008d"
+        ],
+        "provider_statuses": []
+      },
+      {
+        "model": "opencode/deepseek-v4.1-flash-free",
+        "tier": "C2",
+        "status": "task_failed",
+        "attempt_ids": [
+          "3377c0082efd44a28e49dfb57247b647"
+        ],
+        "provider_statuses": []
+      },
+      {
+        "model": "opencode/deepseek-v4.1-flash-free",
+        "tier": "C3",
+        "status": "infrastructure_failed",
+        "attempt_ids": [
+          "f74b68a7f2a949c49f8752079d5b6aec"
+        ],
+        "provider_statuses": [
+          429
+        ]
+      }
+    ],
+    "shipping-threshold": [
+      {
+        "model": "opencode/big-pickle",
+        "tier": "C1",
+        "status": "incomplete",
+        "attempt_ids": [
+          "7241bf5fc12842009f2d6160b2b9088e",
+          "856cfe93db034629a4d47399de9f0a31",
+          "9a2befb44efc4ee793ae7b6e36811649"
+        ],
+        "provider_statuses": []
+      },
+      {
+        "model": "opencode/big-pickle",
+        "tier": "C2",
+        "status": "incomplete",
+        "attempt_ids": [
+          "a38db4e1edff4c3e9921070ada5fc3ab",
+          "bfd598fd25bb4648beb1a1c199a891a2",
+          "d403a6a04406426dac2af6a3c288b7a0"
+        ],
+        "provider_statuses": []
+      },
+      {
+        "model": "opencode/big-pickle",
+        "tier": "C3",
+        "status": "incomplete",
+        "attempt_ids": [
+          "7b7ed4e40b624a0d90b25204f6c66cb8",
+          "947d16a199954dd19426cf01cd5b0455",
+          "aa4ea7049b244869a7740f824a9720a1"
+        ],
+        "provider_statuses": []
+      },
+      {
+        "model": "opencode/deepseek-v4.1-flash-free",
+        "tier": "C1",
+        "status": "incomplete",
+        "attempt_ids": [
+          "89d012a2f69f4e32a47ccb6fcd3e0c65",
+          "ce4feaf338f24dff891f91394765968a",
+          "e40132da093b4cf08011027d3ab52045"
+        ],
+        "provider_statuses": []
+      },
+      {
+        "model": "opencode/deepseek-v4.1-flash-free",
+        "tier": "C2",
+        "status": "incomplete",
+        "attempt_ids": [
+          "52d5695a39244cd8a6da21ba7792bec3",
+          "8ac25e8e3f5a4777b8eb96ba65ec8add",
+          "caa9fd336f9d4d2eb301a64dedfca42d"
+        ],
+        "provider_statuses": []
+      },
+      {
+        "model": "opencode/deepseek-v4.1-flash-free",
+        "tier": "C3",
+        "status": "incomplete",
+        "attempt_ids": [
+          "2bfb91bf1000462cbfd9fb0a0079dad6",
+          "6d585b2469a74dce84d6d81806057b51",
+          "8dd5eef2bc854559ad0a36cedeff6980"
+        ],
+        "provider_statuses": []
+      }
+    ],
+    "sku-lookup": [
+      {
+        "model": "opencode/big-pickle",
+        "tier": "C1",
+        "status": "incomplete",
+        "attempt_ids": [
+          "72407293ad654fcd8868ff7a09db7b57",
+          "763a8a0cd8db4d5ead3a9b994fa68005",
+          "a8267894961b4cf69019f4f504f05e59"
+        ],
+        "provider_statuses": []
+      },
+      {
+        "model": "opencode/big-pickle",
+        "tier": "C2",
+        "status": "incomplete",
+        "attempt_ids": [
+          "048b1e5851854064910391324406d451"
+        ],
+        "provider_statuses": []
+      },
+      {
+        "model": "opencode/big-pickle",
+        "tier": "C3",
+        "status": "missing",
+        "attempt_ids": [],
+        "provider_statuses": []
+      },
+      {
+        "model": "opencode/deepseek-v4.1-flash-free",
+        "tier": "C1",
+        "status": "missing",
+        "attempt_ids": [],
+        "provider_statuses": []
+      },
+      {
+        "model": "opencode/deepseek-v4.1-flash-free",
+        "tier": "C2",
+        "status": "missing",
+        "attempt_ids": [],
+        "provider_statuses": []
+      },
+      {
+        "model": "opencode/deepseek-v4.1-flash-free",
+        "tier": "C3",
+        "status": "missing",
+        "attempt_ids": [],
+        "provider_statuses": []
+      }
+    ],
+    "checkout-shipping": [
+      {
+        "model": "opencode/big-pickle",
+        "tier": "C1",
+        "status": "missing",
+        "attempt_ids": [],
+        "provider_statuses": []
+      },
+      {
+        "model": "opencode/big-pickle",
+        "tier": "C2",
+        "status": "missing",
+        "attempt_ids": [],
+        "provider_statuses": []
+      },
+      {
+        "model": "opencode/big-pickle",
+        "tier": "C3",
+        "status": "missing",
+        "attempt_ids": [],
+        "provider_statuses": []
+      },
+      {
+        "model": "opencode/deepseek-v4.1-flash-free",
+        "tier": "C1",
+        "status": "missing",
+        "attempt_ids": [],
+        "provider_statuses": []
+      },
+      {
+        "model": "opencode/deepseek-v4.1-flash-free",
+        "tier": "C2",
+        "status": "missing",
+        "attempt_ids": [],
+        "provider_statuses": []
+      },
+      {
+        "model": "opencode/deepseek-v4.1-flash-free",
+        "tier": "C3",
+        "status": "missing",
+        "attempt_ids": [],
+        "provider_statuses": []
+      }
+    ],
+    "quantity-validation": [
+      {
+        "model": "opencode/big-pickle",
+        "tier": "C1",
+        "status": "missing",
+        "attempt_ids": [],
+        "provider_statuses": []
+      },
+      {
+        "model": "opencode/big-pickle",
+        "tier": "C2",
+        "status": "missing",
+        "attempt_ids": [],
+        "provider_statuses": []
+      },
+      {
+        "model": "opencode/big-pickle",
+        "tier": "C3",
+        "status": "missing",
+        "attempt_ids": [],
+        "provider_statuses": []
+      },
+      {
+        "model": "opencode/deepseek-v4.1-flash-free",
+        "tier": "C1",
+        "status": "missing",
+        "attempt_ids": [],
+        "provider_statuses": []
+      },
+      {
+        "model": "opencode/deepseek-v4.1-flash-free",
+        "tier": "C2",
+        "status": "missing",
+        "attempt_ids": [],
+        "provider_statuses": []
+      },
+      {
+        "model": "opencode/deepseek-v4.1-flash-free",
+        "tier": "C3",
+        "status": "missing",
+        "attempt_ids": [],
+        "provider_statuses": []
+      }
+    ]
+  }
+}

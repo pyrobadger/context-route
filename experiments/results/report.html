@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ContextRoute | Joint Routing Experiment</title>
+<style>
+:root{color-scheme:light}
+body{margin:0;font:16px/1.6 system-ui,sans-serif;color:#162c31;background:#eef3f0}
+.wrap{max-width:1120px;margin:auto;padding:0 32px}
+header{background:#132f39;color:#f0f6f4;padding:48px 0 32px}
+h1{font-size:clamp(2rem,5vw,3.5rem);letter-spacing:-.04em;margin:0 0 12px}
+header p{color:#c8dede;max-width:680px}
+main{padding:28px 0 60px}
+section{padding:24px 28px;margin:0 0 20px;background:#fffef8;border:1px solid #d4e1de;border-radius:12px}
+h2{font-size:1.7rem;letter-spacing:-.03em;margin:0 0 14px}
+h3{margin:20px 0 8px;font-size:1.1rem}
+table{border-collapse:collapse;width:100%;font-size:.85rem}
+th,td{padding:8px 10px;text-align:left;border-bottom:1px solid #d4e1de;vertical-align:top}
+thead th{background:#e6efec;font-weight:650}
+.scroll{overflow:auto;margin:12px 0}
+.pass{background:#e1efe7;color:#1d5d46;padding:2px 6px;border-radius:3px;display:inline-block}
+.fail{background:#f9e8dc;color:#883e2e;padding:2px 6px;border-radius:3px;display:inline-block}
+.infra{background:#fef3c7;color:#78350f;padding:2px 6px;border-radius:3px;display:inline-block}
+.missing{background:#ecefed;color:#46595a;padding:2px 6px;border-radius:3px;display:inline-block}
+.note{border-left:4px solid #417a83;padding:12px 16px;background:#eaf1ed;margin:14px 0}
+nav{display:flex;gap:14px 20px;flex-wrap:wrap;margin-top:18px}
+nav a{color:#c8e8e6;text-decoration:underline;text-underline-offset:3px}
+</style>
+</head><body>
+<header><div class="wrap">
+<p style="font-weight:700;letter-spacing:.08em;font-size:.82rem;margin:0 0 10px">CONTEXTROUTE EXPERIMENT</p>
+<h1>Joint Routing: Two Models × Three Contexts</h1>
+<p>3 complete six-arm task grids · 23/48 valid cells · Big Pickle + DeepSeek V4.1 Flash Free</p>
+<nav>
+<a href="#coverage">Coverage</a>
+<a href="#performance">Performance</a>
+<a href="#routing">Routing</a>
+<a href="#oracle">Oracle</a>
+<a href="#interactions">Interactions</a>
+<a href="#methods">Methods</a>
+</nav>
+</div></header>
+<main class="wrap">
+
+<section id="coverage">
+<h2>Experiment coverage</h2>
+<p>3 of 8 tasks have complete six-arm grids (all 2 models × 3 context tiers, context hashes matched).</p>
+<p>Complete tasks: <strong>inventory-adjustment, pricing-discount, refund-balance</strong></p>
+<div class="scroll"><table>
+<thead><tr>
+<th>Task</th>
+<th colspan="3">Big Pickle</th>
+<th colspan="3">DeepSeek V4.1 Flash Free</th>
+</tr>
+<tr><th></th><th>C1</th><th>C2</th><th>C3</th><th>C1</th><th>C2</th><th>C3</th></tr>
+</thead>
+<tbody><tr><td>checkout-shipping</td><td class="missing">—</td><td class="missing">—</td><td class="missing">—</td><td class="missing">—</td><td class="missing">—</td><td class="missing">—</td></tr>
+<tr><td>daily-report</td><td class="pass">Pass</td><td class="pass">Pass</td><td class="pass">Pass</td><td class="fail">Fail</td><td class="fail">Fail</td><td class="infra">Infra</td></tr>
+<tr><td>inventory-adjustment</td><td class="pass">Pass</td><td class="pass">Pass</td><td class="pass">Pass</td><td class="pass">Pass</td><td class="pass">Pass</td><td class="pass">Pass</td></tr>
+<tr><td>pricing-discount</td><td class="pass">Pass</td><td class="pass">Pass</td><td class="pass">Pass</td><td class="pass">Pass</td><td class="pass">Pass</td><td class="pass">Pass</td></tr>
+<tr><td>quantity-validation</td><td class="missing">—</td><td class="missing">—</td><td class="missing">—</td><td class="missing">—</td><td class="missing">—</td><td class="missing">—</td></tr>
+<tr><td>refund-balance</td><td class="pass">Pass</td><td class="pass">Pass</td><td class="pass">Pass</td><td class="pass">Pass</td><td class="pass">Pass</td><td class="pass">Pass</td></tr>
+<tr><td>shipping-threshold</td><td class="missing">—</td><td class="missing">—</td><td class="missing">—</td><td class="missing">—</td><td class="missing">—</td><td class="missing">—</td></tr>
+<tr><td>sku-lookup</td><td class="missing">—</td><td class="missing">—</td><td class="missing">—</td><td class="missing">—</td><td class="missing">—</td><td class="missing">—</td></tr>
+</tbody>
+</table></div>
+<p>Infrastructure failures: 1 · Incomplete/timeout: 22 · Valid task failures (legitimate): 2</p>
+</section>
+
+<section id="performance">
+<h2>Model–context performance matrix</h2>
+<div class="scroll"><table>
+<thead><tr><th>Model</th><th>Tier</th><th>Valid n</th><th>Pass rate</th><th>Mean tokens</th><th>Total tokens</th><th>Mean latency (s)</th></tr></thead>
+<tbody><tr><td>Big Pickle</td><td>C1</td><td>4</td><td>100%</td><td>62,739</td><td>250,956</td><td>33.0</td></tr>
+<tr><td>Big Pickle</td><td>C2</td><td>4</td><td>100%</td><td>37,534</td><td>150,135</td><td>19.9</td></tr>
+<tr><td>Big Pickle</td><td>C3</td><td>4</td><td>100%</td><td>49,920</td><td>199,679</td><td>27.8</td></tr>
+<tr><td>DeepSeek V4.1 Flash Free</td><td>C1</td><td>4</td><td>75%</td><td>38,192</td><td>152,768</td><td>23.6</td></tr>
+<tr><td>DeepSeek V4.1 Flash Free</td><td>C2</td><td>4</td><td>75%</td><td>49,252</td><td>197,007</td><td>25.9</td></tr>
+<tr><td>DeepSeek V4.1 Flash Free</td><td>C3</td><td>3</td><td>100%</td><td>29,182</td><td>87,545</td><td>16.5</td></tr>
+</tbody>
+</table></div>
+</section>
+
+<section id="routing">
+<h2>Routing policy comparison</h2>
+<div class="note">Empirical routing status: insufficient_training_tasks</div>
+<p>Fixed baseline: <code>opencode/big-pickle</code> at C2. Each policy uses leave-one-task-out cross-validation on complete grids only. Minimum 4 training observations and Wilson lower bound ≥ 0.50 required for empirical selection.</p>
+<div class="scroll"><table>
+<thead><tr><th>Policy</th><th>Verified</th><th>Pass rate</th><th>Total tokens</th><th>Mean tokens</th><th>Δ vs fixed</th><th>Empirical decisions</th><th>Fallback decisions</th></tr></thead>
+<tbody><tr><td>Fixed baseline</td><td>3/3</td><td>100%</td><td>100,668</td><td>33,556</td><td>—</td><td>0</td><td>0</td></tr>
+<tr><td>Model-only routing</td><td>3/3</td><td>100%</td><td>100,668</td><td>33,556</td><td>—</td><td>0</td><td>3</td></tr>
+<tr><td>Context-only routing</td><td>3/3</td><td>100%</td><td>100,668</td><td>33,556</td><td>—</td><td>0</td><td>3</td></tr>
+<tr><td>Joint routing</td><td>3/3</td><td>100%</td><td>100,668</td><td>33,556</td><td>—</td><td>0</td><td>3</td></tr>
+</tbody>
+</table></div>
+</section>
+
+<section id="oracle">
+<h2>Oracle comparison (hindsight upper bound)</h2>
+<p>Oracle policies select the minimum-token passing arm for each task using the actual held-out outcomes. This represents the best possible routing with perfect knowledge — it is not achievable at inference time.</p>
+<div class="scroll"><table>
+<thead><tr><th>Policy</th><th>Verified</th><th>Pass rate</th><th>Total tokens</th><th>Mean tokens</th><th>Δ vs fixed</th></tr></thead>
+<tbody><tr><td>Fixed baseline oracle</td><td>3/3</td><td>100%</td><td>100,668</td><td>33,556</td><td>+0</td></tr>
+<tr><td>Model-only routing oracle</td><td>3/3</td><td>100%</td><td>92,713</td><td>30,904</td><td>-7,955</td></tr>
+<tr><td>Context-only routing oracle</td><td>3/3</td><td>100%</td><td>67,309</td><td>22,436</td><td>-33,359</td></tr>
+<tr><td>Joint routing oracle</td><td>3/3</td><td>100%</td><td>67,309</td><td>22,436</td><td>-33,359</td></tr>
+</tbody>
+</table></div>
+</section>
+
+<section id="interactions">
+<h2>Model–context interaction effects</h2>
+<p>Investigating whether changing the context tier changes the relative token efficiency of the two models.</p>
+<div class="scroll"><table>
+<thead><tr><th>Task</th><th>C1 Token Winner</th><th>C2 Token Winner</th><th>C3 Token Winner</th><th>Ranking Reversals (Distinct Packs)</th></tr></thead>
+<tbody>
+<tr>
+  <td><strong>inventory-adjustment</strong></td>
+  <td>Big Pickle (17,931 vs 51,461)</td>
+  <td>DeepSeek (43,335 vs 51,290)</td>
+  <td>DeepSeek (28,166 vs 66,323)</td>
+  <td>C1 ↔ C3: Big Pickle wins at C1, DeepSeek wins at C3</td>
+</tr>
+<tr>
+  <td><strong>pricing-discount</strong></td>
+  <td>DeepSeek (35,193 vs 62,977)</td>
+  <td>Big Pickle (25,788 vs 33,700)</td>
+  <td>DeepSeek (27,609 vs 31,302)</td>
+  <td>C1 ↔ C2 and C2 ↔ C3: DeepSeek wins at C1/C3, Big Pickle wins at C2</td>
+</tr>
+<tr>
+  <td><strong>refund-balance</strong></td>
+  <td>DeepSeek (26,114 vs 115,107)</td>
+  <td>Big Pickle (23,590 vs 47,461)</td>
+  <td>Big Pickle (24,386 vs 31,770)</td>
+  <td>C1 ↔ C3: DeepSeek wins at C1, Big Pickle wins at C2/C3</td>
+</tr>
+</tbody>
+</table></div>
+<div class="note">
+  <strong>Key finding:</strong> Across all 3 complete tasks, the more token-efficient model changes depending on the context tier.
+  However, because these observations come from single runs without replication, these reversals reflect a combination of true interaction effects and run-to-run stochasticity.
+</div>
+</section>
+
+<section id="methods">
+<h2>Methods and limitations</h2>
+<ul>
+<li>Repository: <code>contextroute-shop</code> · Fixture commit: <code>6a04966b04f2bee261f11fbb203cd2bef3d9769c</code></li>
+<li>Models: Big Pickle and DeepSeek V4.1 Flash Free (OpenCode-hosted). Gemini 3.5 Flash Lite excluded (no API key).</li>
+<li>OpenCode v2.2.7 in standalone/archived/auto mode. Shell, subagent, external_directory access denied.</li>
+<li>Context tiers C1/C2/C3 built by the existing BM25-deps-v2 retrieval engine.</li>
+<li>Tokens: provider-reported cumulative session totals (input + output). OpenCode-hosted models report $0 cost.</li>
+<li>With 3 complete tasks, leave-one-out folds have only 2 training tasks — below the minimum of 4 for empirical joint routing.</li>
+<li>Single execution per arm. Ranking reversals cannot be distinguished from run-to-run noise without replication.</li>
+<li>One synthetic repository and task set. Results may not generalize.</li>
+</ul>
+<p>Source files: <a href="../../experiments/tasks.json">experiments/tasks.json</a> · <a href="../../experiments/analysis_rules.md">experiments/analysis_rules.md</a> · <a href="analysis.json">analysis.json</a></p>
+</section>
+</main></body></html>
