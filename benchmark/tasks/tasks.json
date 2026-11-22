@@ -1,0 +1,74 @@
+[
+  {
+    "id": "inventory-adjustment",
+    "category": "bug",
+    "prompt": "Fix the inventory availability calculation in shop/inventory.py. Stock already reserved by other orders should not count as available, and availability must never go below zero. Change the implementation only. The checkout also has tests for nearby behavior.",
+    "verify": "test_availability"
+  },
+  {
+    "id": "pricing-discount",
+    "category": "bug",
+    "prompt": "A promotion can reduce a customer's total below zero. Fix percentage discounts in shop/pricing.py so a discount above 100% is capped and a negative percentage does not raise the subtotal.",
+    "verify": "test_discount"
+  },
+  {
+    "id": "refund-balance",
+    "category": "bug",
+    "prompt": "A second partial refund can exceed the money remaining on a payment. Fix the refund limit in shop/payments.py while keeping valid partial refunds working.",
+    "verify": "test_refund"
+  },
+  {
+    "id": "daily-report",
+    "category": "bug",
+    "prompt": "Support sees orders from the previous day in the daily sales report. Only completed orders on the requested calendar day should contribute. Inspect shop/reporting.py.",
+    "verify": "test_report"
+  },
+  {
+    "id": "shipping-threshold",
+    "category": "bug",
+    "prompt": "Customers with an exact $50 subtotal are charged shipping even though the offer says $50 or more. Fix the boundary in shop/shipping.py.",
+    "verify": "test_shipping"
+  },
+  {
+    "id": "sku-lookup",
+    "category": "bug",
+    "prompt": "A warehouse import sometimes records surrounding whitespace on SKU labels. In shop/catalog.py, make lookups ignore surrounding whitespace and letter case on both stored and requested SKUs.",
+    "verify": "test_lookup"
+  },
+  {
+    "id": "checkout-shipping",
+    "category": "feature",
+    "prompt": "Add support for selecting express shipping at checkout. Add an optional keyword express=False to shop/orders.py checkout and shop/shipping.py shipping_fee. Express costs $12 even above the standard free-shipping threshold. Keep current standard prices and the call signature compatible.",
+    "verify": "test_express"
+  },
+  {
+    "id": "quantity-validation",
+    "category": "bug",
+    "prompt": "Fix checkout accepting invalid quantities. Both shop/orders.py checkout and shop/pricing.py line_total should reject zero, negative, non-integer and bool quantities with ValueError. Centralize validation in shop/validation.py.",
+    "verify": "test_quantities"
+  },
+  {
+    "id": "restock-alerts",
+    "category": "feature",
+    "prompt": "Implement low_stock in shop/inventory.py. Given a sequence of Stock objects and a threshold, return their SKUs in input order when available stock is strictly less than the threshold. Account for reservations and floor availability at zero.",
+    "verify": "test_restock"
+  },
+  {
+    "id": "receipts",
+    "category": "refactor",
+    "prompt": "Refactor receipt generation by adding a reusable money formatter format_money(value) in shop/money.py and using it from shop/receipts.py. Preserve the current $ prefix and two-decimal display, and round currency half up.",
+    "verify": "test_receipts"
+  },
+  {
+    "id": "quantity-regression-tests",
+    "category": "test",
+    "prompt": "Add tests/test_quantity_regression.py with a pytest regression test proving that shop/validation.py rejects non-integer quantities, including the string '2'. Keep production behavior unchanged.",
+    "verify": "test_agent_regression"
+  },
+  {
+    "id": "orders-export",
+    "category": "feature",
+    "prompt": "Add export_rows to shop/reporting.py. Given an iterable of Order records and a date, return (order_id, rounded Decimal amount) tuples for paid orders on that date, ordered by order ID. Accept generators.",
+    "verify": "test_export"
+  }
+]

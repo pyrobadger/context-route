@@ -1,0 +1,28 @@
+{
+  "split": "leave-one-task-out synthetic pilot",
+  "complete_tasks": 1,
+  "incomplete_tasks": 0,
+  "attempted_runs": 2,
+  "ineligible_runs": 1,
+  "matrix": [
+    {
+      "model": "opencode/deepseek-v4.1-flash-free",
+      "context": "C2",
+      "tasks": 1,
+      "successes": 1,
+      "success_rate": 1.0,
+      "input_tokens": 35861,
+      "output_tokens": 643,
+      "total_tokens": 36504,
+      "total_cost_usd": 0,
+      "mean_latency_seconds": 16.715,
+      "median_latency_seconds": 16.715,
+      "cost_per_success_usd": 0.0,
+      "successes_per_million_tokens": 27.39425816348893,
+      "initial_context_tokens": 814
+    }
+  ],
+  "rank_reversals": [],
+  "policies": {},
+  "replay_status": "insufficient_matrix"
+}

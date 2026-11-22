@@ -1,0 +1,28 @@
+{
+  "name": "contextroute",
+  "version": "0.1.0",
+  "description": "Evidence-based model and repository-context routing for OpenCode",
+  "main": "./dist/plugin/index.js",
+  "scripts": {
+    "test": "npm run build && node --test tests/unit.test.mjs",
+    "build": "tsc -p tsconfig.json",
+    "test:integration": "npm run build && node --test tests/opencode.integration.test.mjs",
+    "prepack": "npm run build"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@opencode/plugin": "2.2.7",
+    "@types/node": "24.19.2",
+    "typescript": "7.0.2"
+  },
+  "exports": {
+    "./server": "./dist/plugin/index.js"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ]
+}

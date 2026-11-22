@@ -1,0 +1,111 @@
+{
+  "inventory-adjustment": [
+    [
+      "shop/inventory.py",
+      "return item.on_hand",
+      "return max(0, item.on_hand - item.reserved)"
+    ]
+  ],
+  "pricing-discount": [
+    [
+      "shop/pricing.py",
+      "Decimal(percent) / 100",
+      "Decimal(min(100, max(0, percent))) / 100"
+    ]
+  ],
+  "refund-balance": [
+    [
+      "shop/payments.py",
+      "if amount > payment.captured:",
+      "if amount > payment.captured - payment.refunded:"
+    ]
+  ],
+  "daily-report": [
+    [
+      "shop/reporting.py",
+      "if order.status == \"paid\"",
+      "if order.status == \"paid\" and order.ordered_on == day"
+    ]
+  ],
+  "shipping-threshold": [
+    [
+      "shop/shipping.py",
+      "subtotal > Decimal(\"50.00\")",
+      "subtotal >= Decimal(\"50.00\")"
+    ]
+  ],
+  "sku-lookup": [
+    [
+      "shop/catalog.py",
+      "product.sku == sku",
+      "product.sku.strip().casefold() == sku.strip().casefold()"
+    ]
+  ],
+  "checkout-shipping": [
+    [
+      "shop/orders.py",
+      "def checkout(unit_price: Decimal, quantity: int) -> Decimal:\n    subtotal = line_total(unit_price, quantity)\n    return subtotal + shipping_fee(subtotal)",
+      "def checkout(unit_price: Decimal, quantity: int, *, express: bool = False) -> Decimal:\n    subtotal = line_total(unit_price, quantity)\n    return subtotal + shipping_fee(subtotal, express=express)"
+    ],
+    [
+      "shop/shipping.py",
+      "def shipping_fee(subtotal: Decimal) -> Decimal:\n",
+      "def shipping_fee(subtotal: Decimal, *, express: bool = False) -> Decimal:\n    if express:\n        return Decimal('12.00')\n"
+    ]
+  ],
+  "quantity-validation": [
+    [
+      "shop/validation.py",
+      "if not isinstance(quantity, int):",
+      "if type(quantity) is not int or quantity < 1:"
+    ],
+    [
+      "shop/pricing.py",
+      "from decimal import Decimal",
+      "from decimal import Decimal\n\nfrom .validation import validate_quantity"
+    ],
+    [
+      "shop/pricing.py",
+      "return unit_price * quantity",
+      "validate_quantity(quantity)\n    return unit_price * quantity"
+    ]
+  ],
+  "restock-alerts": [
+    [
+      "shop/inventory.py",
+      null,
+      "\n\ndef low_stock(items: list[Stock], threshold: int) -> list[str]:\n    return [item.sku for item in items if max(0, item.on_hand - item.reserved) < threshold]\n"
+    ]
+  ],
+  "receipts": [
+    [
+      "shop/money.py",
+      null,
+      "\n\ndef format_money(value: Decimal) -> str:\n    return f'${round_currency(value):.2f}'\n"
+    ],
+    [
+      "shop/receipts.py",
+      "from .money import round_currency",
+      "from .money import format_money"
+    ],
+    [
+      "shop/receipts.py",
+      "${round_currency(value):.2f}",
+      "{format_money(value)}"
+    ]
+  ],
+  "quantity-regression-tests": [
+    [
+      "tests/test_quantity_regression.py",
+      null,
+      "\nimport pytest\n\nfrom shop.validation import validate_quantity\n\n\ndef test_rejects_string():\n    with pytest.raises(ValueError):\n        validate_quantity('2')\n"
+    ]
+  ],
+  "orders-export": [
+    [
+      "shop/reporting.py",
+      null,
+      "\n\ndef export_rows(orders, day):\n    return sorted((order.order_id, round_currency(order.amount)) for order in orders\n                  if order.status == 'paid' and order.ordered_on == day)\n"
+    ]
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "reason": "daily_budget_exhausted",
+  "quota": {
+    "pacific_day": "2026-11-21",
+    "daily_requests": 374,
+    "remaining_rpd": 26,
+    "remaining_rpm": 8,
+    "remaining_tpm": 192874,
+    "reset_at_utc_epoch": 1795334400.0,
+    "provider_block_until_utc_epoch": null
+  },
+  "retry_at_utc_epoch": 1795334400.0
+}

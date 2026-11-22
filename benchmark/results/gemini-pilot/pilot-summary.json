@@ -1,0 +1,470 @@
+{
+  "model": "google/gemini-3.5-flash-lite",
+  "attempts_recorded": 17,
+  "completed": 11,
+  "verified_passes": 9,
+  "completed_cells": [
+    {
+      "task_id": "daily-report",
+      "context_id": "C1",
+      "context_hash": "ccae2ddc4d5764d5e160f748547d34386b53264d2a91a3990d507b52516e6e0e",
+      "resolved": false,
+      "input_tokens": 62593,
+      "output_tokens": 690,
+      "total_tokens": 63283,
+      "latency_seconds": 121.896,
+      "wall_seconds": 123.661,
+      "tool_calls": 9,
+      "execution_id": "af7124d1760e4233874bfcbde3bd58a5",
+      "provider_usage": {
+        "api_requests": 22,
+        "generation_requests": 11,
+        "token_count_requests": 11,
+        "generation_requests_with_usage": 11,
+        "estimated_input_tokens": 62593,
+        "observed_input_tokens": 62593,
+        "observed_output_tokens": 690,
+        "observed_total_tokens": 63283,
+        "provider_429_count": 0,
+        "upstream_statuses": [
+          200
+        ],
+        "response_model_versions": [
+          "gemini-3.5-flash-lite"
+        ],
+        "quota": {
+          "pacific_day": "2026-11-21",
+          "daily_requests": 256,
+          "remaining_rpd": 144,
+          "remaining_rpm": 0,
+          "remaining_tpm": 165622,
+          "reset_at_utc_epoch": 1795334400.0,
+          "provider_block_until_utc_epoch": null
+        }
+      }
+    },
+    {
+      "task_id": "daily-report",
+      "context_id": "C2",
+      "context_hash": "26f83bf8fed9b55abbbb78dc9500a1f851a0244129789a3572f748357e0b7c78",
+      "resolved": false,
+      "input_tokens": 76132,
+      "output_tokens": 669,
+      "total_tokens": 76801,
+      "latency_seconds": 125.999,
+      "wall_seconds": 127.838,
+      "tool_calls": 11,
+      "execution_id": "6a1e19c12b17405e89e0e145cd19d2e2",
+      "provider_usage": {
+        "api_requests": 26,
+        "generation_requests": 13,
+        "token_count_requests": 13,
+        "generation_requests_with_usage": 13,
+        "estimated_input_tokens": 76132,
+        "observed_input_tokens": 76132,
+        "observed_output_tokens": 669,
+        "observed_total_tokens": 76801,
+        "provider_429_count": 0,
+        "upstream_statuses": [
+          200
+        ],
+        "response_model_versions": [
+          "gemini-3.5-flash-lite"
+        ],
+        "quota": {
+          "pacific_day": "2026-11-21",
+          "daily_requests": 304,
+          "remaining_rpd": 96,
+          "remaining_rpm": 0,
+          "remaining_tpm": 164427,
+          "reset_at_utc_epoch": 1795334400.0,
+          "provider_block_until_utc_epoch": null
+        }
+      }
+    },
+    {
+      "task_id": "inventory-adjustment",
+      "context_id": "C1",
+      "context_hash": "e038f8423aa6bdc2461032111f041a40890d4eb985442409c7b939e9a63fedf9",
+      "resolved": true,
+      "input_tokens": 49424,
+      "output_tokens": 501,
+      "total_tokens": 49925,
+      "latency_seconds": 73.841,
+      "wall_seconds": 75.668,
+      "tool_calls": 7,
+      "execution_id": "a5b540287ea546528460b1304479a648",
+      "provider_usage": {
+        "api_requests": 18,
+        "generation_requests": 9,
+        "token_count_requests": 9,
+        "generation_requests_with_usage": 9,
+        "estimated_input_tokens": 49424,
+        "observed_input_tokens": 49424,
+        "observed_output_tokens": 501,
+        "observed_total_tokens": 49925,
+        "provider_429_count": 0,
+        "upstream_statuses": [
+          200
+        ],
+        "response_model_versions": [
+          "gemini-3.5-flash-lite"
+        ],
+        "quota": {
+          "pacific_day": "2026-11-21",
+          "daily_requests": 58,
+          "remaining_rpd": 342,
+          "remaining_rpm": 0,
+          "remaining_tpm": 167497,
+          "reset_at_utc_epoch": 1795334400.0,
+          "provider_block_until_utc_epoch": null
+        }
+      }
+    },
+    {
+      "task_id": "inventory-adjustment",
+      "context_id": "C2",
+      "context_hash": "e038f8423aa6bdc2461032111f041a40890d4eb985442409c7b939e9a63fedf9",
+      "resolved": true,
+      "input_tokens": 43101,
+      "output_tokens": 449,
+      "total_tokens": 43550,
+      "latency_seconds": 86.926,
+      "wall_seconds": 88.751,
+      "tool_calls": 6,
+      "execution_id": "3efd302e2a3f4e42981cb97f9286138b",
+      "provider_usage": {
+        "api_requests": 16,
+        "generation_requests": 8,
+        "token_count_requests": 8,
+        "generation_requests_with_usage": 8,
+        "estimated_input_tokens": 43101,
+        "observed_input_tokens": 43101,
+        "observed_output_tokens": 449,
+        "observed_total_tokens": 43550,
+        "provider_429_count": 0,
+        "upstream_statuses": [
+          200
+        ],
+        "response_model_versions": [
+          "gemini-3.5-flash-lite"
+        ],
+        "quota": {
+          "pacific_day": "2026-11-21",
+          "daily_requests": 74,
+          "remaining_rpd": 326,
+          "remaining_rpm": 0,
+          "remaining_tpm": 168049,
+          "reset_at_utc_epoch": 1795334400.0,
+          "provider_block_until_utc_epoch": null
+        }
+      }
+    },
+    {
+      "task_id": "inventory-adjustment",
+      "context_id": "C3",
+      "context_hash": "6cb20ee4ce9d517a35063ec4ca9fac73a3daffc79e0d8b44337670b565d92064",
+      "resolved": true,
+      "input_tokens": 54373,
+      "output_tokens": 617,
+      "total_tokens": 54990,
+      "latency_seconds": 97.855,
+      "wall_seconds": 99.597,
+      "tool_calls": 8,
+      "execution_id": "4cdc4e874cfb4cd99c52b0a60372e394",
+      "provider_usage": {
+        "api_requests": 20,
+        "generation_requests": 10,
+        "token_count_requests": 10,
+        "generation_requests_with_usage": 10,
+        "estimated_input_tokens": 54373,
+        "observed_input_tokens": 54373,
+        "observed_output_tokens": 617,
+        "observed_total_tokens": 54990,
+        "provider_429_count": 0,
+        "upstream_statuses": [
+          200
+        ],
+        "response_model_versions": [
+          "gemini-3.5-flash-lite"
+        ],
+        "quota": {
+          "pacific_day": "2026-11-21",
+          "daily_requests": 94,
+          "remaining_rpd": 306,
+          "remaining_rpm": 0,
+          "remaining_tpm": 168069,
+          "reset_at_utc_epoch": 1795334400.0,
+          "provider_block_until_utc_epoch": null
+        }
+      }
+    },
+    {
+      "task_id": "pricing-discount",
+      "context_id": "C1",
+      "context_hash": "73e5b95dcfbffc29f1b3b2d13ab1ede284be6fb96c3501cd352b9f2f0d312dbd",
+      "resolved": true,
+      "input_tokens": 86914,
+      "output_tokens": 788,
+      "total_tokens": 87702,
+      "latency_seconds": 129.458,
+      "wall_seconds": 131.372,
+      "tool_calls": 13,
+      "execution_id": "d6ef65add07a4a02941bef625ae6a24a",
+      "provider_usage": {
+        "api_requests": 30,
+        "generation_requests": 15,
+        "token_count_requests": 15,
+        "generation_requests_with_usage": 15,
+        "estimated_input_tokens": 86914,
+        "observed_input_tokens": 86914,
+        "observed_output_tokens": 788,
+        "observed_total_tokens": 87702,
+        "provider_429_count": 0,
+        "upstream_statuses": [
+          200
+        ],
+        "response_model_versions": [
+          "gemini-3.5-flash-lite"
+        ],
+        "quota": {
+          "pacific_day": "2026-11-21",
+          "daily_requests": 124,
+          "remaining_rpd": 276,
+          "remaining_rpm": 0,
+          "remaining_tpm": 164709,
+          "reset_at_utc_epoch": 1795334400.0,
+          "provider_block_until_utc_epoch": null
+        }
+      }
+    },
+    {
+      "task_id": "pricing-discount",
+      "context_id": "C2",
+      "context_hash": "edc3f9b4a90bef0beac753fe3c80055dba7078fb768755e3c9baddc015f32fbb",
+      "resolved": true,
+      "input_tokens": 70190,
+      "output_tokens": 590,
+      "total_tokens": 70780,
+      "latency_seconds": 151.592,
+      "wall_seconds": 153.421,
+      "tool_calls": 10,
+      "execution_id": "e0109be2850b4393a67f69d0860945d8",
+      "provider_usage": {
+        "api_requests": 24,
+        "generation_requests": 12,
+        "token_count_requests": 12,
+        "generation_requests_with_usage": 12,
+        "estimated_input_tokens": 70190,
+        "observed_input_tokens": 70190,
+        "observed_output_tokens": 590,
+        "observed_total_tokens": 70780,
+        "provider_429_count": 0,
+        "upstream_statuses": [
+          200
+        ],
+        "response_model_versions": [
+          "gemini-3.5-flash-lite"
+        ],
+        "quota": {
+          "pacific_day": "2026-11-21",
+          "daily_requests": 148,
+          "remaining_rpd": 252,
+          "remaining_rpm": 0,
+          "remaining_tpm": 164731,
+          "reset_at_utc_epoch": 1795334400.0,
+          "provider_block_until_utc_epoch": null
+        }
+      }
+    },
+    {
+      "task_id": "pricing-discount",
+      "context_id": "C3",
+      "context_hash": "bdb409425b2ea67981e7b217e17e8c111a053f884d6cbf3214a1db198998a73c",
+      "resolved": true,
+      "input_tokens": 76381,
+      "output_tokens": 670,
+      "total_tokens": 77051,
+      "latency_seconds": 129.46,
+      "wall_seconds": 131.322,
+      "tool_calls": 11,
+      "execution_id": "56908b705dcc481692fdcfab9920b7a1",
+      "provider_usage": {
+        "api_requests": 26,
+        "generation_requests": 13,
+        "token_count_requests": 13,
+        "generation_requests_with_usage": 13,
+        "estimated_input_tokens": 76381,
+        "observed_input_tokens": 76381,
+        "observed_output_tokens": 670,
+        "observed_total_tokens": 77051,
+        "provider_429_count": 0,
+        "upstream_statuses": [
+          200
+        ],
+        "response_model_versions": [
+          "gemini-3.5-flash-lite"
+        ],
+        "quota": {
+          "pacific_day": "2026-11-21",
+          "daily_requests": 174,
+          "remaining_rpd": 226,
+          "remaining_rpm": 0,
+          "remaining_tpm": 164752,
+          "reset_at_utc_epoch": 1795334400.0,
+          "provider_block_until_utc_epoch": null
+        }
+      }
+    },
+    {
+      "task_id": "refund-balance",
+      "context_id": "C1",
+      "context_hash": "b171f8d35e4a590bbcbf2c09a2b3f37ab66c00fe5808d5d97cc706d2b5503c3d",
+      "resolved": true,
+      "input_tokens": 48528,
+      "output_tokens": 617,
+      "total_tokens": 49145,
+      "latency_seconds": 92.209,
+      "wall_seconds": 94.05,
+      "tool_calls": 7,
+      "execution_id": "b1c1c661df2e49de9739cc105ed4007d",
+      "provider_usage": {
+        "api_requests": 18,
+        "generation_requests": 9,
+        "token_count_requests": 9,
+        "generation_requests_with_usage": 9,
+        "estimated_input_tokens": 48528,
+        "observed_input_tokens": 48528,
+        "observed_output_tokens": 617,
+        "observed_total_tokens": 49145,
+        "provider_429_count": 0,
+        "upstream_statuses": [
+          200
+        ],
+        "response_model_versions": [
+          "gemini-3.5-flash-lite"
+        ],
+        "quota": {
+          "pacific_day": "2026-11-21",
+          "daily_requests": 192,
+          "remaining_rpd": 208,
+          "remaining_rpm": 0,
+          "remaining_tpm": 167411,
+          "reset_at_utc_epoch": 1795334400.0,
+          "provider_block_until_utc_epoch": null
+        }
+      }
+    },
+    {
+      "task_id": "refund-balance",
+      "context_id": "C2",
+      "context_hash": "b171f8d35e4a590bbcbf2c09a2b3f37ab66c00fe5808d5d97cc706d2b5503c3d",
+      "resolved": true,
+      "input_tokens": 68548,
+      "output_tokens": 684,
+      "total_tokens": 69232,
+      "latency_seconds": 128.729,
+      "wall_seconds": 130.505,
+      "tool_calls": 10,
+      "execution_id": "8086e83bf6d14847900f7a0302e3be1b",
+      "provider_usage": {
+        "api_requests": 24,
+        "generation_requests": 12,
+        "token_count_requests": 12,
+        "generation_requests_with_usage": 12,
+        "estimated_input_tokens": 68548,
+        "observed_input_tokens": 68548,
+        "observed_output_tokens": 684,
+        "observed_total_tokens": 69232,
+        "provider_429_count": 0,
+        "upstream_statuses": [
+          200
+        ],
+        "response_model_versions": [
+          "gemini-3.5-flash-lite"
+        ],
+        "quota": {
+          "pacific_day": "2026-11-21",
+          "daily_requests": 216,
+          "remaining_rpd": 184,
+          "remaining_rpm": 0,
+          "remaining_tpm": 164536,
+          "reset_at_utc_epoch": 1795334400.0,
+          "provider_block_until_utc_epoch": null
+        }
+      }
+    },
+    {
+      "task_id": "refund-balance",
+      "context_id": "C3",
+      "context_hash": "a2cd063c584385cfa6d1f5614a096348c663f346fc15aec77b614cf53e7f9a72",
+      "resolved": true,
+      "input_tokens": 48812,
+      "output_tokens": 667,
+      "total_tokens": 49479,
+      "latency_seconds": 90.491,
+      "wall_seconds": 92.323,
+      "tool_calls": 7,
+      "execution_id": "2e996d574ffe44fba9ba833fdcdb9ff8",
+      "provider_usage": {
+        "api_requests": 18,
+        "generation_requests": 9,
+        "token_count_requests": 9,
+        "generation_requests_with_usage": 9,
+        "estimated_input_tokens": 48812,
+        "observed_input_tokens": 48812,
+        "observed_output_tokens": 667,
+        "observed_total_tokens": 49479,
+        "provider_429_count": 0,
+        "upstream_statuses": [
+          200
+        ],
+        "response_model_versions": [
+          "gemini-3.5-flash-lite"
+        ],
+        "quota": {
+          "pacific_day": "2026-11-21",
+          "daily_requests": 234,
+          "remaining_rpd": 166,
+          "remaining_rpm": 0,
+          "remaining_tpm": 167359,
+          "reset_at_utc_epoch": 1795334400.0,
+          "provider_block_until_utc_epoch": null
+        }
+      }
+    }
+  ],
+  "local_guard_limits": {
+    "rpm": 10,
+    "tpm": 200000,
+    "rpd": 400
+  },
+  "quota_snapshot": {
+    "pacific_day": "2026-11-21",
+    "daily_requests": 374,
+    "remaining_rpd": 26,
+    "remaining_rpm": 8,
+    "remaining_tpm": 192874,
+    "reset_at_utc_epoch": 1795334400.0,
+    "provider_block_until_utc_epoch": null
+  },
+  "all_pilot_requests": 374,
+  "all_pilot_request_types": {
+    "count_tokens": 187,
+    "generate": 187
+  },
+  "requests_without_final_http_status": 0,
+  "generation_requests_with_observed_usage": 184,
+  "all_pilot_observed_usage": {
+    "input_tokens": 1059589,
+    "output_tokens": 10158,
+    "total_tokens": 1069747
+  },
+  "provider_429_count": 0,
+  "peak_rolling_requests": 10,
+  "peak_rolling_reserved_input_tokens": 36607,
+  "completed_mean_requests_per_cell": 22,
+  "completed_max_requests_per_cell": 30,
+  "rough_additional_cells_at_pilot_max": 0,
+  "capacity_note": "Local snapshot. The provider project can also have usage from other clients. A pilot maximum is a planning estimate."
+}

@@ -1,0 +1,434 @@
+{
+  "inventory-adjustment": [
+    {
+      "model": "opencode/big-pickle",
+      "tier": "C1",
+      "status": "passed",
+      "attempt_ids": [
+        "011f99245ca4443f816c5722a32b4898"
+      ],
+      "provider_statuses": []
+    },
+    {
+      "model": "opencode/big-pickle",
+      "tier": "C2",
+      "status": "passed",
+      "attempt_ids": [
+        "ffd056f1614644f7afcdb2b98d5d24da"
+      ],
+      "provider_statuses": []
+    },
+    {
+      "model": "opencode/big-pickle",
+      "tier": "C3",
+      "status": "passed",
+      "attempt_ids": [
+        "1566e02b4b3848ff98fee48dc8b1f3de"
+      ],
+      "provider_statuses": []
+    },
+    {
+      "model": "opencode/deepseek-v4.1-flash-free",
+      "tier": "C1",
+      "status": "passed",
+      "attempt_ids": [
+        "d797de7e9b03411fae0697210e4f9562"
+      ],
+      "provider_statuses": []
+    },
+    {
+      "model": "opencode/deepseek-v4.1-flash-free",
+      "tier": "C2",
+      "status": "passed",
+      "attempt_ids": [
+        "a50ba7f9f23249739f727c1f13b2b655"
+      ],
+      "provider_statuses": []
+    },
+    {
+      "model": "opencode/deepseek-v4.1-flash-free",
+      "tier": "C3",
+      "status": "passed",
+      "attempt_ids": [
+        "3ae3a056d3ba4ea2acc2e99432929c2d"
+      ],
+      "provider_statuses": []
+    }
+  ],
+  "pricing-discount": [
+    {
+      "model": "opencode/big-pickle",
+      "tier": "C1",
+      "status": "passed",
+      "attempt_ids": [
+        "2257848ac4cd40ccb8f05aaa9cd8c96c"
+      ],
+      "provider_statuses": []
+    },
+    {
+      "model": "opencode/big-pickle",
+      "tier": "C2",
+      "status": "passed",
+      "attempt_ids": [
+        "40b814a9554d4c078b5a83720ca817f5"
+      ],
+      "provider_statuses": []
+    },
+    {
+      "model": "opencode/big-pickle",
+      "tier": "C3",
+      "status": "passed",
+      "attempt_ids": [
+        "9b8745753a414ec9b6b2b4cfcbcab353"
+      ],
+      "provider_statuses": []
+    },
+    {
+      "model": "opencode/deepseek-v4.1-flash-free",
+      "tier": "C1",
+      "status": "passed",
+      "attempt_ids": [
+        "90702d2dfe7d4bec9f92959f825b97b7"
+      ],
+      "provider_statuses": []
+    },
+    {
+      "model": "opencode/deepseek-v4.1-flash-free",
+      "tier": "C2",
+      "status": "passed",
+      "attempt_ids": [
+        "017717ad8d864a66844e55c2c7205d70"
+      ],
+      "provider_statuses": []
+    },
+    {
+      "model": "opencode/deepseek-v4.1-flash-free",
+      "tier": "C3",
+      "status": "passed",
+      "attempt_ids": [
+        "25d44ee085e049b594ab3e2c314d44a3"
+      ],
+      "provider_statuses": []
+    }
+  ],
+  "refund-balance": [
+    {
+      "model": "opencode/big-pickle",
+      "tier": "C1",
+      "status": "passed",
+      "attempt_ids": [
+        "2fccde692b7b4b819d7979a3f8bf64cc"
+      ],
+      "provider_statuses": []
+    },
+    {
+      "model": "opencode/big-pickle",
+      "tier": "C2",
+      "status": "passed",
+      "attempt_ids": [
+        "151ef32437bf45e8976596b648101ede"
+      ],
+      "provider_statuses": []
+    },
+    {
+      "model": "opencode/big-pickle",
+      "tier": "C3",
+      "status": "passed",
+      "attempt_ids": [
+        "d016e3b616024659bdec08a6a26d1b21"
+      ],
+      "provider_statuses": []
+    },
+    {
+      "model": "opencode/deepseek-v4.1-flash-free",
+      "tier": "C1",
+      "status": "passed",
+      "attempt_ids": [
+        "b5cab8cfd2764097b64d0954294c82de"
+      ],
+      "provider_statuses": []
+    },
+    {
+      "model": "opencode/deepseek-v4.1-flash-free",
+      "tier": "C2",
+      "status": "passed",
+      "attempt_ids": [
+        "beb0ad0510e742a4b2324c71454dfdd9"
+      ],
+      "provider_statuses": []
+    },
+    {
+      "model": "opencode/deepseek-v4.1-flash-free",
+      "tier": "C3",
+      "status": "passed",
+      "attempt_ids": [
+        "81fd61f991224a2d943ade4120565b78"
+      ],
+      "provider_statuses": []
+    }
+  ],
+  "daily-report": [
+    {
+      "model": "opencode/big-pickle",
+      "tier": "C1",
+      "status": "passed",
+      "attempt_ids": [
+        "fabdedb78cc846faa8ebc5c035c6c329"
+      ],
+      "provider_statuses": []
+    },
+    {
+      "model": "opencode/big-pickle",
+      "tier": "C2",
+      "status": "passed",
+      "attempt_ids": [
+        "45e76ffd865d45feae6f762c288c4a6b"
+      ],
+      "provider_statuses": []
+    },
+    {
+      "model": "opencode/big-pickle",
+      "tier": "C3",
+      "status": "passed",
+      "attempt_ids": [
+        "3bb63141a4e948ccbc772b9ca18f4bf5"
+      ],
+      "provider_statuses": []
+    },
+    {
+      "model": "opencode/deepseek-v4.1-flash-free",
+      "tier": "C1",
+      "status": "task_failed",
+      "attempt_ids": [
+        "2bb5c33011fc430f90e0179459f8008d"
+      ],
+      "provider_statuses": []
+    },
+    {
+      "model": "opencode/deepseek-v4.1-flash-free",
+      "tier": "C2",
+      "status": "task_failed",
+      "attempt_ids": [
+        "3377c0082efd44a28e49dfb57247b647"
+      ],
+      "provider_statuses": []
+    },
+    {
+      "model": "opencode/deepseek-v4.1-flash-free",
+      "tier": "C3",
+      "status": "infrastructure_failed",
+      "attempt_ids": [
+        "f74b68a7f2a949c49f8752079d5b6aec"
+      ],
+      "provider_statuses": [
+        429
+      ]
+    }
+  ],
+  "shipping-threshold": [
+    {
+      "model": "opencode/big-pickle",
+      "tier": "C1",
+      "status": "incomplete",
+      "attempt_ids": [
+        "7241bf5fc12842009f2d6160b2b9088e",
+        "856cfe93db034629a4d47399de9f0a31",
+        "9a2befb44efc4ee793ae7b6e36811649"
+      ],
+      "provider_statuses": []
+    },
+    {
+      "model": "opencode/big-pickle",
+      "tier": "C2",
+      "status": "incomplete",
+      "attempt_ids": [
+        "a38db4e1edff4c3e9921070ada5fc3ab",
+        "bfd598fd25bb4648beb1a1c199a891a2",
+        "d403a6a04406426dac2af6a3c288b7a0"
+      ],
+      "provider_statuses": []
+    },
+    {
+      "model": "opencode/big-pickle",
+      "tier": "C3",
+      "status": "incomplete",
+      "attempt_ids": [
+        "7b7ed4e40b624a0d90b25204f6c66cb8",
+        "947d16a199954dd19426cf01cd5b0455",
+        "aa4ea7049b244869a7740f824a9720a1"
+      ],
+      "provider_statuses": []
+    },
+    {
+      "model": "opencode/deepseek-v4.1-flash-free",
+      "tier": "C1",
+      "status": "incomplete",
+      "attempt_ids": [
+        "89d012a2f69f4e32a47ccb6fcd3e0c65",
+        "ce4feaf338f24dff891f91394765968a",
+        "e40132da093b4cf08011027d3ab52045"
+      ],
+      "provider_statuses": []
+    },
+    {
+      "model": "opencode/deepseek-v4.1-flash-free",
+      "tier": "C2",
+      "status": "incomplete",
+      "attempt_ids": [
+        "52d5695a39244cd8a6da21ba7792bec3",
+        "8ac25e8e3f5a4777b8eb96ba65ec8add",
+        "caa9fd336f9d4d2eb301a64dedfca42d"
+      ],
+      "provider_statuses": []
+    },
+    {
+      "model": "opencode/deepseek-v4.1-flash-free",
+      "tier": "C3",
+      "status": "incomplete",
+      "attempt_ids": [
+        "2bfb91bf1000462cbfd9fb0a0079dad6",
+        "6d585b2469a74dce84d6d81806057b51",
+        "8dd5eef2bc854559ad0a36cedeff6980"
+      ],
+      "provider_statuses": []
+    }
+  ],
+  "sku-lookup": [
+    {
+      "model": "opencode/big-pickle",
+      "tier": "C1",
+      "status": "incomplete",
+      "attempt_ids": [
+        "72407293ad654fcd8868ff7a09db7b57",
+        "763a8a0cd8db4d5ead3a9b994fa68005",
+        "a8267894961b4cf69019f4f504f05e59"
+      ],
+      "provider_statuses": []
+    },
+    {
+      "model": "opencode/big-pickle",
+      "tier": "C2",
+      "status": "incomplete",
+      "attempt_ids": [
+        "048b1e5851854064910391324406d451"
+      ],
+      "provider_statuses": []
+    },
+    {
+      "model": "opencode/big-pickle",
+      "tier": "C3",
+      "status": "missing",
+      "attempt_ids": [],
+      "provider_statuses": []
+    },
+    {
+      "model": "opencode/deepseek-v4.1-flash-free",
+      "tier": "C1",
+      "status": "missing",
+      "attempt_ids": [],
+      "provider_statuses": []
+    },
+    {
+      "model": "opencode/deepseek-v4.1-flash-free",
+      "tier": "C2",
+      "status": "missing",
+      "attempt_ids": [],
+      "provider_statuses": []
+    },
+    {
+      "model": "opencode/deepseek-v4.1-flash-free",
+      "tier": "C3",
+      "status": "missing",
+      "attempt_ids": [],
+      "provider_statuses": []
+    }
+  ],
+  "checkout-shipping": [
+    {
+      "model": "opencode/big-pickle",
+      "tier": "C1",
+      "status": "missing",
+      "attempt_ids": [],
+      "provider_statuses": []
+    },
+    {
+      "model": "opencode/big-pickle",
+      "tier": "C2",
+      "status": "missing",
+      "attempt_ids": [],
+      "provider_statuses": []
+    },
+    {
+      "model": "opencode/big-pickle",
+      "tier": "C3",
+      "status": "missing",
+      "attempt_ids": [],
+      "provider_statuses": []
+    },
+    {
+      "model": "opencode/deepseek-v4.1-flash-free",
+      "tier": "C1",
+      "status": "missing",
+      "attempt_ids": [],
+      "provider_statuses": []
+    },
+    {
+      "model": "opencode/deepseek-v4.1-flash-free",
+      "tier": "C2",
+      "status": "missing",
+      "attempt_ids": [],
+      "provider_statuses": []
+    },
+    {
+      "model": "opencode/deepseek-v4.1-flash-free",
+      "tier": "C3",
+      "status": "missing",
+      "attempt_ids": [],
+      "provider_statuses": []
+    }
+  ],
+  "quantity-validation": [
+    {
+      "model": "opencode/big-pickle",
+      "tier": "C1",
+      "status": "missing",
+      "attempt_ids": [],
+      "provider_statuses": []
+    },
+    {
+      "model": "opencode/big-pickle",
+      "tier": "C2",
+      "status": "missing",
+      "attempt_ids": [],
+      "provider_statuses": []
+    },
+    {
+      "model": "opencode/big-pickle",
+      "tier": "C3",
+      "status": "missing",
+      "attempt_ids": [],
+      "provider_statuses": []
+    },
+    {
+      "model": "opencode/deepseek-v4.1-flash-free",
+      "tier": "C1",
+      "status": "missing",
+      "attempt_ids": [],
+      "provider_statuses": []
+    },
+    {
+      "model": "opencode/deepseek-v4.1-flash-free",
+      "tier": "C2",
+      "status": "missing",
+      "attempt_ids": [],
+      "provider_statuses": []
+    },
+    {
+      "model": "opencode/deepseek-v4.1-flash-free",
+      "tier": "C3",
+      "status": "missing",
+      "attempt_ids": [],
+      "provider_statuses": []
+    }
+  ]
+}

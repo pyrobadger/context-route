@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ContextRoute benchmark report</title><style>
+:root{color-scheme:light;--paper:#f5f4ee;--ink:#18312a;--accent:#21654f;--rule:#cbd5ca;--muted:#4d6257}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 system-ui,sans-serif}
+main{max-width:1140px;margin:auto;padding:42px 24px 75px}header{border-bottom:3px solid var(--accent);padding:0 0 24px}
+h1,h2,h3{line-height:1.13;letter-spacing:-.03em}h1{font:clamp(2.6rem,8vw,5rem)/.95 Georgia,serif;margin:.18em 0}
+h2{font-size:1.8rem;margin:0 0 .75em}h3{font-size:1.14rem;margin:.8em 0}p{margin:.5em 0}.sub,small{color:var(--muted)}
+section{margin-top:38px}article{background:#fffef8;border:1px solid var(--rule);border-radius:7px;padding:20px;margin-top:15px}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}caption{text-align:left;font-weight:600}
+th,td{padding:9px 12px;border-bottom:1px solid var(--rule);text-align:left;vertical-align:top}thead th{background:#e8ede4}
+.table{overflow:auto}td.num{text-align:right;white-space:nowrap}.bad{color:#9b2929;font-weight:700}.good{color:#206249;font-weight:650}
+details{margin-top:12px}summary{cursor:pointer;font-weight:650}code{overflow-wrap:anywhere}.plots{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+svg{width:100%;height:auto;display:block}.plots svg text{fill:var(--ink);font:12px system-ui}.axis{stroke:#708278;stroke-width:1}
+.bar{display:grid;grid-template-columns:7rem 1fr 5rem;gap:9px;align-items:center;margin:12px 0}.track{height:12px;background:#e8ede4}
+.fill{display:block;height:100%;background:var(--accent)}footer{margin-top:50px;border-top:1px solid var(--rule);padding-top:18px}
+@media(max-width:740px){.plots{grid-template-columns:1fr}.bar{grid-template-columns:6rem 1fr 4rem}main{padding:28px 15px}}
+</style></head>
+<body><main><header><h1>ContextRoute</h1><p>OpenCode benchmark results</p>
+<p class="sub">1 recorded attempts · 0 validated executions</p></header>
+<section aria-label="Measured comparisons"><h2>OpenCode default versus ContextRoute</h2><p class="sub">No paired baseline and routed runs are available.</p></section>
+<section><h2>Model–context matrix</h2>
+<p class="sub">No validated forced runs are available.</p></section>
+<section><h2>Held-out policy replay</h2>
+
+<p class="sub">Replay requires at least two tasks with complete matrices and a fixed configuration present in the grid.</p>
+
+
+<h3>Model rank reversals</h3><p class="sub">No rank reversal was observed in eligible matched comparisons.</p></section>
+<section><h2>Incomplete runs</h2><div class="table"><table><thead><tr><th scope="col">Task</th><th scope="col">Mode</th><th scope="col">Tier</th><th scope="col">Expected model</th><th scope="col">Status</th><th scope="col">Observed detail</th></tr></thead><tbody><tr><td>inventory-adjustment</td><td>baseline</td><td>default</td><td>opencode/beam-free</td><td>failed</td><td>[429]</td></tr></tbody></table></div></section>
+<footer class="sub">Controlled synthetic-shop pilot. Token totals use OpenCode session telemetry. Costs are simulated list prices from the catalog where available. Percentage changes describe the individual matched runs.</footer>
+</main></body></html>

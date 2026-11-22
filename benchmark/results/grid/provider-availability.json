@@ -1,0 +1,11 @@
+[
+  {
+    "checked_at_utc": "2026-11-21T16:27:31.225329+00:00",
+    "model": "opencode/deepseek-v4.1-flash-free",
+    "operation": "experimental.generate.text",
+    "inference_confirmed": false,
+    "upstream_status": 429,
+    "cli_exit": 1,
+    "free_usage_limit": true
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "plugins": [
+    {
+      "package": "file:///E:/Programing/context_route_new",
+      "options": {
+        "mode": "auto",
+        "fallback_context": "C2",
+        "contexts": ["C1", "C2", "C3"],
+        "constraints": {
+          "min_samples": 4,
+          "min_success": 0.50
+        }
+      }
+    }
+  ]
+}
+

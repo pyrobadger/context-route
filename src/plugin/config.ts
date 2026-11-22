@@ -1,0 +1,55 @@
+import { isAbsolute, join, resolve } from "node:path";
+import { contextIds, type ContextId } from "../context/context-builder.js";
+import type { Constraints } from "../router/types.js";
+
+const modes = ["auto", "confirm", "context-only", "baseline", "forced", "joint"] as const;
+export type Mode = typeof modes[number];
+
+export function readConfig(raw: Record<string, unknown>, directory: string) {
+  const mode = modes.find(value => value === raw.mode) ?? "auto";
+  const strict = mode === "baseline" || mode === "forced" || mode === "joint";
+  const data = join(directory, ".contextroute");
+  const geminiGate = typeof raw.gemini_gate_url === "string" ? new URL(raw.gemini_gate_url) : undefined;
+  if (geminiGate && (geminiGate.protocol !== "http:" || geminiGate.hostname !== "127.0.0.1"
+    || !geminiGate.port || geminiGate.origin + "/" !== geminiGate.href)) {
+    throw new RangeError("Gemini quota gate must be a local HTTP origin.");
+  }
+  const file = (value: unknown, fallback: string) => typeof value === "string" && value
+    ? isAbsolute(value) ? value : resolve(directory, value)
+    : join(data, fallback);
+  const constraints: Constraints = {};
+  const requested = raw.constraints;
+  if (requested && typeof requested === "object") {
+    const keys = ["min_success", "min_samples", "max_context_tokens", "max_total_tokens", "max_cost_usd",
+      "max_latency_seconds", "reserved_input_tokens", "reserved_output_tokens"] as const;
+    for (const key of keys) {
+      const value = (requested as Record<string, unknown>)[key];
+      if (typeof value !== "number") continue;
+      if (!Number.isFinite(value) || value < 0 || (key === "min_success" && value > 1)
+        || (key === "min_samples" && (!Number.isInteger(value) || value < 1))) {
+        throw new RangeError("Invalid ContextRoute constraint " + key);
+      }
+      constraints[key] = value;
+    }
+  }
+  const context = contextIds.find(value => raw.context === value);
+  const fallbackContext = contextIds.find(value => raw.fallback_context === value);
+  if (raw.fallback_context !== undefined && !fallbackContext) {
+    throw new RangeError("Invalid ContextRoute fallback_context.");
+  }
+  const model = typeof raw.model === "string" ? raw.model : undefined;
+  if (mode === "forced" && (!model || !context)) throw new Error("Forced mode requires a model and a valid context tier.");
+  return {
+    mode, strict, model, context, fallbackContext, geminiGate,
+    demo: raw.demo === "loopback_fixture",
+    constraints,
+    evidence: file(raw.evidence, "evidence"),
+    telemetry: file(raw.telemetry_path, "execution.jsonl"),
+    telemetryEnabled: strict || raw.telemetry !== false,
+    packPath: typeof raw.pack_path === "string" ? file(raw.pack_path, "context.json") : undefined,
+    taskId: typeof raw.task_id === "string" ? raw.task_id : undefined,
+    models: Array.isArray(raw.models) ? raw.models.filter((id): id is string => typeof id === "string") : undefined,
+    contexts: Array.isArray(raw.contexts) ? raw.contexts.filter((id): id is ContextId => contextIds.some(context => context === id)) : ["C1", "C2", "C3"] as ContextId[],
+  };
+}
+

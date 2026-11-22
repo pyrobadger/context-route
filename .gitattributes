@@ -1,0 +1,3 @@
+# Preserve exact bytes for saved benchmark traces and reproducibility checksums.
+benchmark/results/** -text
+experiments/results/results.jsonl -text

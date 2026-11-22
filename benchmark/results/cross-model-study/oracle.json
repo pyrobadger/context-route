@@ -1,0 +1,247 @@
+{
+  "objective": "Prefer verified success, then minimize observed total tokens. Ties retain the fixed arm if available.",
+  "policies": {
+    "fixed": {
+      "tasks": 3,
+      "successes": 3,
+      "success_rate": 1.0,
+      "input_tokens": 96377,
+      "output_tokens": 4291,
+      "total_tokens": 100668,
+      "total_cost_usd": 0,
+      "mean_latency_seconds": 18.91433333333333,
+      "median_latency_seconds": 22.466,
+      "cost_per_success_usd": 0.0,
+      "successes_per_million_tokens": 29.800929789009416,
+      "initial_context_tokens": 2420,
+      "average_tokens": 33556.0,
+      "median_tokens": 25788,
+      "average_cost_usd": 0.0,
+      "token_delta_vs_fixed": 0
+    },
+    "model_only": {
+      "tasks": 3,
+      "successes": 3,
+      "success_rate": 1.0,
+      "input_tokens": 89203,
+      "output_tokens": 3510,
+      "total_tokens": 92713,
+      "total_cost_usd": 0,
+      "mean_latency_seconds": 19.348666666666666,
+      "median_latency_seconds": 23.354,
+      "cost_per_success_usd": 0.0,
+      "successes_per_million_tokens": 32.35792175854519,
+      "initial_context_tokens": 2420,
+      "average_tokens": 30904.333333333332,
+      "median_tokens": 25788,
+      "average_cost_usd": 0.0,
+      "token_delta_vs_fixed": -7955
+    },
+    "context_only": {
+      "tasks": 3,
+      "successes": 3,
+      "success_rate": 1.0,
+      "input_tokens": 63544,
+      "output_tokens": 3765,
+      "total_tokens": 67309,
+      "total_cost_usd": 0,
+      "mean_latency_seconds": 15.593,
+      "median_latency_seconds": 12.502,
+      "cost_per_success_usd": 0.0,
+      "successes_per_million_tokens": 44.570562629068924,
+      "initial_context_tokens": 2420,
+      "average_tokens": 22436.333333333332,
+      "median_tokens": 23590,
+      "average_cost_usd": 0.0,
+      "token_delta_vs_fixed": -33359
+    },
+    "joint": {
+      "tasks": 3,
+      "successes": 3,
+      "success_rate": 1.0,
+      "input_tokens": 63544,
+      "output_tokens": 3765,
+      "total_tokens": 67309,
+      "total_cost_usd": 0,
+      "mean_latency_seconds": 15.593,
+      "median_latency_seconds": 12.502,
+      "cost_per_success_usd": 0.0,
+      "successes_per_million_tokens": 44.570562629068924,
+      "initial_context_tokens": 2420,
+      "average_tokens": 22436.333333333332,
+      "median_tokens": 23590,
+      "average_cost_usd": 0.0,
+      "token_delta_vs_fixed": -33359
+    }
+  },
+  "selections": [
+    {
+      "task": "inventory-adjustment",
+      "policy": "fixed",
+      "selection_basis": "fixed",
+      "selected_outcome": {
+        "execution_id": "ffd056f1614644f7afcdb2b98d5d24da",
+        "model_id": "opencode/big-pickle",
+        "context_id": "C2",
+        "resolved": true,
+        "total_tokens": 51290,
+        "latency_seconds": 22.466,
+        "estimated_list_price_usd": 0
+      }
+    },
+    {
+      "task": "pricing-discount",
+      "policy": "fixed",
+      "selection_basis": "fixed",
+      "selected_outcome": {
+        "execution_id": "40b814a9554d4c078b5a83720ca817f5",
+        "model_id": "opencode/big-pickle",
+        "context_id": "C2",
+        "resolved": true,
+        "total_tokens": 25788,
+        "latency_seconds": 10.923,
+        "estimated_list_price_usd": 0
+      }
+    },
+    {
+      "task": "refund-balance",
+      "policy": "fixed",
+      "selection_basis": "fixed",
+      "selected_outcome": {
+        "execution_id": "151ef32437bf45e8976596b648101ede",
+        "model_id": "opencode/big-pickle",
+        "context_id": "C2",
+        "resolved": true,
+        "total_tokens": 23590,
+        "latency_seconds": 23.354,
+        "estimated_list_price_usd": 0
+      }
+    },
+    {
+      "task": "inventory-adjustment",
+      "policy": "model_only",
+      "selection_basis": "observed outcome and token usage",
+      "selected_outcome": {
+        "execution_id": "a50ba7f9f23249739f727c1f13b2b655",
+        "model_id": "opencode/deepseek-v4.1-flash-free",
+        "context_id": "C2",
+        "resolved": true,
+        "total_tokens": 43335,
+        "latency_seconds": 23.769,
+        "estimated_list_price_usd": 0
+      }
+    },
+    {
+      "task": "pricing-discount",
+      "policy": "model_only",
+      "selection_basis": "observed outcome and token usage",
+      "selected_outcome": {
+        "execution_id": "40b814a9554d4c078b5a83720ca817f5",
+        "model_id": "opencode/big-pickle",
+        "context_id": "C2",
+        "resolved": true,
+        "total_tokens": 25788,
+        "latency_seconds": 10.923,
+        "estimated_list_price_usd": 0
+      }
+    },
+    {
+      "task": "refund-balance",
+      "policy": "model_only",
+      "selection_basis": "observed outcome and token usage",
+      "selected_outcome": {
+        "execution_id": "151ef32437bf45e8976596b648101ede",
+        "model_id": "opencode/big-pickle",
+        "context_id": "C2",
+        "resolved": true,
+        "total_tokens": 23590,
+        "latency_seconds": 23.354,
+        "estimated_list_price_usd": 0
+      }
+    },
+    {
+      "task": "inventory-adjustment",
+      "policy": "context_only",
+      "selection_basis": "observed outcome and token usage",
+      "selected_outcome": {
+        "execution_id": "011f99245ca4443f816c5722a32b4898",
+        "model_id": "opencode/big-pickle",
+        "context_id": "C1",
+        "resolved": true,
+        "total_tokens": 17931,
+        "latency_seconds": 12.502,
+        "estimated_list_price_usd": 0
+      }
+    },
+    {
+      "task": "pricing-discount",
+      "policy": "context_only",
+      "selection_basis": "observed outcome and token usage",
+      "selected_outcome": {
+        "execution_id": "40b814a9554d4c078b5a83720ca817f5",
+        "model_id": "opencode/big-pickle",
+        "context_id": "C2",
+        "resolved": true,
+        "total_tokens": 25788,
+        "latency_seconds": 10.923,
+        "estimated_list_price_usd": 0
+      }
+    },
+    {
+      "task": "refund-balance",
+      "policy": "context_only",
+      "selection_basis": "observed outcome and token usage",
+      "selected_outcome": {
+        "execution_id": "151ef32437bf45e8976596b648101ede",
+        "model_id": "opencode/big-pickle",
+        "context_id": "C2",
+        "resolved": true,
+        "total_tokens": 23590,
+        "latency_seconds": 23.354,
+        "estimated_list_price_usd": 0
+      }
+    },
+    {
+      "task": "inventory-adjustment",
+      "policy": "joint",
+      "selection_basis": "observed outcome and token usage",
+      "selected_outcome": {
+        "execution_id": "011f99245ca4443f816c5722a32b4898",
+        "model_id": "opencode/big-pickle",
+        "context_id": "C1",
+        "resolved": true,
+        "total_tokens": 17931,
+        "latency_seconds": 12.502,
+        "estimated_list_price_usd": 0
+      }
+    },
+    {
+      "task": "pricing-discount",
+      "policy": "joint",
+      "selection_basis": "observed outcome and token usage",
+      "selected_outcome": {
+        "execution_id": "40b814a9554d4c078b5a83720ca817f5",
+        "model_id": "opencode/big-pickle",
+        "context_id": "C2",
+        "resolved": true,
+        "total_tokens": 25788,
+        "latency_seconds": 10.923,
+        "estimated_list_price_usd": 0
+      }
+    },
+    {
+      "task": "refund-balance",
+      "policy": "joint",
+      "selection_basis": "observed outcome and token usage",
+      "selected_outcome": {
+        "execution_id": "151ef32437bf45e8976596b648101ede",
+        "model_id": "opencode/big-pickle",
+        "context_id": "C2",
+        "resolved": true,
+        "total_tokens": 23590,
+        "latency_seconds": 23.354,
+        "estimated_list_price_usd": 0
+      }
+    }
+  ]
+}

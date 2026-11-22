@@ -1,0 +1,20 @@
+import type { Constraints } from "../router/types.js";
+declare const modes: readonly ["auto", "confirm", "baseline", "forced", "joint"];
+export type Mode = typeof modes[number];
+export declare function readConfig(raw: Record<string, unknown>, directory: string): {
+    mode: "auto" | "baseline" | "confirm" | "forced" | "joint";
+    strict: boolean;
+    model: string | undefined;
+    context: "C1" | "C2" | "C3" | "L1" | "L2" | "L3" | undefined;
+    fallbackContext: "C1" | "C2" | "C3" | "L1" | "L2" | "L3" | undefined;
+    geminiGate: URL | undefined;
+    constraints: Constraints;
+    evidence: string;
+    telemetry: string;
+    telemetryEnabled: boolean;
+    packPath: string | undefined;
+    taskId: string | undefined;
+    models: string[] | undefined;
+    contexts: ("C1" | "C2" | "C3" | "L1" | "L2" | "L3")[];
+};
+export {};
